@@ -1,0 +1,25 @@
+{
+  "name": "koreanban-dev",
+  "version": "1.0.0",
+  "description": "Development Repo for Korean Ban Website powered by Vue JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoreanBan/koreanban-dev.git"
+  },
+  "keywords": [
+    "koreanban"
+  ],
+  "author": "Marco H Tjokro, Yong Jun Jung, Anatolii Hordiienko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KoreanBan/koreanban-dev/issues"
+  },
+  "homepage": "https://github.com/KoreanBan/koreanban-dev#readme",
+  "dependencies": {
+    "vue": "^2.5.22"
+  }
+}
