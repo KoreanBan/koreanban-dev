@@ -5,7 +5,6 @@
 		<meta charset="utf-8">
 		<link href="css/index.css" rel="stylesheet" type="text/css" />
 		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-database.js"></script>
 		<script type="text/javascript">
 			// Initialize Firebase
@@ -19,9 +18,7 @@
 			};
 			firebase.initializeApp(config);
 			
-			/**
-			 * Handles the sign in button press.
-			 */
+			/* Handles the sign in button press */
 			function toggleSignIn() {
 				if (firebase.auth().currentUser) {
 					// [START signout]
@@ -58,9 +55,8 @@
 				}
 				document.getElementById('quickstart-sign-in').disabled = true;
 			}
-			/**
-			 * Handles the sign up button press.
-			 */
+			
+			/* Handles the sign up button press*/
 			function handleSignUp() {
 				var email = document.getElementById('email').value;
 				var password = document.getElementById('password').value;
@@ -89,9 +85,7 @@
 				});
 				// [END createwithemail]
 			}
-			/**
-			 * Sends an email verification to the user.
-			 */
+			/* Sends an email verification to the user */
 			function sendEmailVerification() {
 				// [START sendemailverification]
 				firebase.auth().currentUser.sendEmailVerification().then(function() {
@@ -179,9 +173,41 @@
 	</head>
 
 	<body>
-		
-		
-		
-		
+		<div>
+			<!-- Header section containing title -->
+			<header>
+				<div >
+					<div>
+						<h1>Admin Login</h1>
+					</div>
+				</div>
+			</header>
+
+			<main>
+				<div>	
+						<div>
+							<p>Enter an email and password below and either sign in to an existing account or sign up</p>
+							<input type="text" id="email" name="email" placeholder="Email"/>
+							<br/>
+							<input type="password" id="password" name="password" placeholder="Password"/>
+							<br/>
+							<button disabled id="quickstart-sign-in" name="signin">Sign In</button>
+							
+							<button id="quickstart-sign-up" name="signup">Sign Up</button>
+							
+							<button disabled id="quickstart-verify-email" name="verify-email">Verify My Email</button>
+							
+							<button id="quickstart-password-reset" name="verify-email">Reset Password</button>
+							
+							<br/><br/>
+							<div>
+								Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+								<div>Firebase auth <code>currentUser</code> object value:</div>
+								<pre><code id="quickstart-account-details">null</code></pre>
+							</div>
+						</div>
+				</div>
+			</main>
+		</div>
 	</body>
 </html>
