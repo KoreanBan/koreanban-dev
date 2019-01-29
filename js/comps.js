@@ -5,3 +5,7 @@ Vue.component('ingredientList', {
 							<td>{{ingField}}</td>\
 						</tr>"
 })
+
+Vue.component(
+
+)

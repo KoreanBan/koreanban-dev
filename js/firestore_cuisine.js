@@ -20,8 +20,15 @@ var cuisines_admin = new Vue({
 		food_desc:"",
 		food_origin:"",
 		food_url:"",
-		items: [
-			{ingNum:"", ingField:"<input type='text'/>"}
+		ingredient_list: [
+			{
+				list:""
+			}
+		],
+		recipes_list: [
+			{
+				list:""
+			}
 		]
 	},
 	methods:{
@@ -31,13 +38,17 @@ var cuisines_admin = new Vue({
 			var description = this.food_desc;
 			var origin = this.food_origin;
 			var origin_url = this.food_url;
+			var ingredients = this.ingredient_list;
+			var recipes = this.recipes_list;
 			console.log("Saving to Firestore DB:" + image, name, description, origin, origin_url);
 			firestore.collection("koreanbap-cuisines").add({
 				food_image: image,
 				food_name: name,
 				food_desc: description,
 				food_origin: origin,
-				food_url: origin_url
+				food_url: origin_url,
+				food_ingredients: ingredients,
+				food_recipes: recipes
 			}).then(function(docRef){
 				console.log("Status saved!", docRef.id);
 			}).catch(function(error){
@@ -45,8 +56,20 @@ var cuisines_admin = new Vue({
 			})
 		},
 		addInputIng: function(){
-			var obj = {ingredientList}
-			this.items.push(obj)
+			this.ingredient_list.push({
+				list:""
+			})
+		},
+		addInputRec: function(){
+			this.recipes_list.push({
+				list:""
+			})
+		},
+		deleteInputIng: function(index){
+			this.ingredient_list.splice(index, 1)
+		},
+		deleteInputRec: function(index){
+			this.recipes_list.splice(index, 1)
 		}
 	}
 });
