@@ -3,11 +3,9 @@
 	<head>
 		<title>Cuisines</title>
 		<meta charset="utf-8">
-		<link href="css/cuisines.css" rel="stylesheet" type="text/css" />
 		<script src="node_modules/vue/dist/vue.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
-		<script src="js/comps.js"></script>
 	</head>
 	<body>
 		<div id="cuisines">
@@ -49,10 +47,10 @@
 			<button @click="addInputRec()">Add more recipes</button>
 
 			<br/><br/>
-			<button v-on:click="saveButton">Save Data</button>
-		
+			<button @click="saveButton()">Save Data</button>
+					
 		</div>
-		
+
 		<script src="js/firestore_cuisine.js"></script>
 	</body>
 </html>

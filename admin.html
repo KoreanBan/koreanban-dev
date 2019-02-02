@@ -3,173 +3,35 @@
 	<head>
 		<title>Admin</title>
 		<meta charset="utf-8">
-		<link href="css/index.css" rel="stylesheet" type="text/css" />
+		<link href="css/admin.css" rel="stylesheet" type="text/css" />
+		<script src="node_modules/vue/dist/vue.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
-		<script type="text/javascript">
-			// Initialize Firebase
-			var config = {
-				apiKey: "AIzaSyCbvK3qfFlV69cunT68WTjZZehGS6laxho",
-				authDomain: "koreanban-2019.firebaseapp.com",
-				databaseURL: "https://koreanban-2019.firebaseio.com",
-				projectId: "koreanban-2019",
-				storageBucket: "koreanban-2019.appspot.com",
-				messagingSenderId: "121373359348"
-			};
-			firebase.initializeApp(config);
-			
-			//SIGN IN
-			function toggleSignIn() {
-				if (firebase.auth().currentUser) {
-					firebase.auth().signOut();
-				} else {
-					var email = document.getElementById('email').value;
-					var password = document.getElementById('password').value;
-					if (email.length < 4) {
-						alert('Please enter an email address.');
-						return;
-					}
-					if (password.length < 4) {
-						alert('Please enter a password.');
-						return;
-					}
-					//Sign In with Email and Password
-					firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-						var errorCode = error.code;
-						var errorMessage = error.message;
-						if (errorCode === 'auth/wrong-password') {
-							alert('Wrong password.');
-						} else {
-							alert(errorMessage);
-						}
-						console.log(error);
-						document.getElementById('quickstart-sign-in').disabled = false;
-					});
-				}
-				document.getElementById('quickstart-sign-in').disabled = true;
-			}
-			
-			//SIGN UP
-			function handleSignUp() {
-				var email = document.getElementById('email').value;
-				var password = document.getElementById('password').value;
-				if (email.length < 4) {
-					alert('Please enter an email address.');
-					return;
-				}
-				if (password.length < 4) {
-					alert('Please enter a password.');
-					return;
-				}
-				//Sign Up with Email and Password
-				firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-					var errorCode = error.code;
-					var errorMessage = error.message;
-					if (errorCode == 'auth/weak-password') {
-						alert('The password is too weak.');
-					} else {
-						alert(errorMessage);
-					}
-					console.log(error);
-				});
-			}
-			
-			//EMAIL VERIFICATION
-			function sendEmailVerification() {
-				firebase.auth().currentUser.sendEmailVerification().then(function() {
-					alert('Email Verification Sent!');
-				});
-			}
-			
-			//RESET PASSWORD
-			function sendPasswordReset() {
-				var email = document.getElementById('email').value;
-				firebase.auth().sendPasswordResetEmail(email).then(function() {
-					alert('Password Reset Email Sent!');
-				}).catch(function(error) {
-					var errorCode = error.code;
-					var errorMessage = error.message;
-					if (errorCode == 'auth/invalid-email') {
-						alert(errorMessage);
-					} else if (errorCode == 'auth/user-not-found') {
-						alert(errorMessage);
-					}
-					console.log(error);
-				});
-			}
-			
-			//AUTHENTICATION STATES
-			function initApp() {
-				firebase.auth().onAuthStateChanged(function(user) {
-					document.getElementById('quickstart-verify-email').disabled = true;
-					if (user) {
-						// User is signed in.
-						var displayName = user.displayName;
-						var email = user.email;
-						var emailVerified = user.emailVerified;
-						var photoURL = user.photoURL;
-						var isAnonymous = user.isAnonymous;
-						var uid = user.uid;
-						var providerData = user.providerData;
-
-						document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
-						document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-						document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-						if (!emailVerified) {
-							document.getElementById('quickstart-verify-email').disabled = false;
-						}
-					} else {
-						document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
-						document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-						document.getElementById('quickstart-account-details').textContent = 'null';
-					}
-					document.getElementById('quickstart-sign-in').disabled = false;
-				});
-
-				document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
-				document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
-				document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
-				document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
-			}
-			window.onload = function() {
-				initApp();
-			};
-		</script>
 	</head>
 
 	<body>
 		<div>
 			<header>
-				<div >
-					<div>
-						<h1>Admin Login</h1>
-					</div>
+				<div>
+					<h1>Admin Login</h1>
 				</div>
 			</header>
-
-			<main>
-				<div>	
-					<div>
-						<p>Enter an email and password below and either sign in to an existing account or sign up</p>
-						<input type="text" id="email" name="email" placeholder="Email"/>
-						<br/><br/>
-						<input type="password" id="password" name="password" placeholder="Password"/>
-						<br/><br/>
-						<button disabled id="quickstart-sign-in" name="signin">Sign In</button>
-						<button id="quickstart-sign-up" name="signup">Sign Up</button>
-						<button disabled id="quickstart-verify-email" name="verify-email">Verify My Email</button>
-						<button id="quickstart-password-reset" name="verify-email">Reset Password</button>
-						<br/><br/>
-<!--
-						<div>
-							Sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
-							<div>Authentication <code>currentUser</code> object value:</div>
-							<pre><code id="quickstart-account-details">null</code></pre>
-						</div>
--->
-					</div>
-				</div>
-			</main>
+	
+			<div>
+				<p>Enter an email and password below and sign in to an existing account. To get access to the admin area, please contact the administrator.</p>
+				<input type="text" id="email" name="email" placeholder="Email"/>
+				<br/><br/>
+				<input type="password" id="password" name="password" placeholder="Password"/>
+				<br/><br/>
+				<button id="login" name="login" class="hide">Log In</button>
+				<button id="logout" name="logout" class="hide">Log Out</button>
+			</div>
+				
 		</div>
+		
+		<div id="form"></div>
+		
+		<script src="js/firestore_admin.js"></script>
+		
 	</body>
 </html>
