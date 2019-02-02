@@ -1,0 +1,73 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,800');
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --main-color:#0061aa;
+  --secondary-color:#ee3b33;
+  --grey-color:#5d737e;
+  --bright-color:#F9F9F9;
+  --text-color:#4a4a4a;
+  /* Overlay */
+  --dark-overlay:rgba(0,0,0,0.7);
+  /* Font Family */
+  --font-main:'Open Sans', sans-serif;
+  --font-secondary:'Raleway',sans-serif;
+}
+/* Navigation */
+.nav-item a{
+  font-family:var(--font-main);
+  color:var(--link-color);
+}
+
+/* Icons */
+.nav-item img {
+  width:70px;
+  height:50px;
+}
+
+/* FORM HEADER */
+
+#suggestion-section {
+  background:url('/assets/food/pattern.jpg');
+  min-height:800px;
+  background-size:cover;
+  background-attachment:fixed;
+  font-family:var(--font-secondary);
+  line-height:2;
+}
+
+.home-inner {
+  padding-top:250px;
+}
+
+#suggestion-section .fa {
+  background:var(--secondary-color);
+  color:var(--bright-color);
+  padding:4px;
+  border-radius:1px;
+}
+
+#suggestion-section h1 strong {
+  font-family:var(--font-main);
+}
+
+#suggestion-section button{
+  background-color:var(--main-color);
+  color:var(--bright-color);
+}
+
+#suggestion-section button:hover{
+  background-color:var(--secondary-color);
+}
+
+/* Footer */
+footer {
+  background-color:var(--grey-color);
+}
+
+footer p, span {
+  font-family:var(--font-secondary);
+}
