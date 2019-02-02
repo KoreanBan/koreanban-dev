@@ -1,5 +1,7 @@
+
 .navbar-nav{
-  font-size: 25px;  
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 body {
     background-color: antiquewhite
@@ -39,3 +41,21 @@ body {
 #footer{
   padding-right: 40px
 }
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,800');
+
+
+.nav-item a{
+  font-family:var(--font-main);
+  color:var(--link-color);
+}
+
+/* Icons */
+.nav-item img {
+  width:70px;
+  height:50px;
+}
+
+
+
