@@ -1,116 +1,58 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Raleway:500');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,800');
 
-/* CSS Variables */
-:root {
-  /* Colors */
-  --main-color:#0061aa;
-  --secondary-color:#ee3b33;
-  --grey-color:#5d737e;
-  --bright-color:#F9F9F9;
-  --text-color:#4a4a4a;
-  /* Overlay */
-  --dark-overlay:rgba(0,0,0,0.7);
-  /* Font Family */
-  --font-main:'Open Sans', sans-serif;
-  --font-secondary:'Raleway',sans-serif;
+.navbar-nav{
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
-/* Navigation */
-
+body {
+    background-color: antiquewhite
+}
 .nav-item a{
   font-family:var(--font-main);
   color:var(--link-color);
 }
-
 /* Icons */
 .nav-item img {
   width:70px;
   height:50px;
 }
 
-/* HeroImage */
-#heroImage {
-  background:url('/assets/food/Sweet\ and\ Sour\ Chicken_opt.jpg');
-  min-height:800px;
-  background-size:cover;
-  background-attachment:fixed;
+#main{
+  margin-top: 150px;
+  margin-left: 15px;
+  width: 50%;
+  
 }
-
-.dark-overlay{
-  background-color:var(--dark-overlay);
+.rounded {
+    opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
   position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  min-height:800px;
+  left: 25%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+#main:hover .rounded {
+  opacity: 0.3;
 }
 
-.home-inner {
-  padding-top:270px;
+#main:hover .middle {
+  opacity: 1;
 }
 
-header h1 {
-  font-family:var(--font-main);
-  font-weight:600;
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
 }
 
-header hr {
-  border:1px solid var(--secondary-color);
-}
 
-header p {
-  font-family:'Raleway',sans-serif;
-  color:var(--bright-color);
-}
-
-/* Origin & Ingredients */
-
-/* Buttons */
-#origin_ing button{
-  background-color:var(--main-color);
-  color:var(--bright-color);
-  font-family:'Open Sans',sans-serif;
-}
-
-#origin_ing button:hover{
-  background-color:var(--secondary-color);
-}
-
-/* Receipes */
-#receipe h3 {
-  font-family:var(--font-main);
-  font-weight:600;
-}
-
-#receipe h2 {
-  font-family:var(--font-main);
-}
-
-#receipe p {
-  font-family:var(--font-secondary);
-}
-
-#receipe .container {
-  padding-top:10px;
-}
-
-#receipe .row p {
-  color:var(--text-color);
-}
-
-/* Footer */
-footer {
-  background-color:var(--grey-color);
-}
-
-footer p, span {
-  font-family:var(--font-secondary);
-}
-
-/* Media Queries */
-@media only screen and (max-width:540px){
-  #receipe .container h2 {
-    font-size:3rem;
-  }
-}
