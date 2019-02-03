@@ -35,7 +35,15 @@
 			console.log(firebaseUser);
 			btnLogout.classList.remove('hide');
 			btnLogin.classList.add('hide');
-			adminForm.innerHTML = '<object type="text/html" data="cuisine_database.html" id="formStyle"></object>'
+			adminForm.innerHTML = '<h2 id="currUser"></h2><object type="text/html" data="cuisine_database.html" id="formStyle"></object>';
+			
+			var user = firebase.auth().currentUser;
+			
+			if(user != null){
+				var email_id = user.email;
+				document.getElementById("currUser").innerHTML = "Welcome to Admin area, " +email_id+ "!";
+			}
+			
 		} else {
 			console.log('User is not logged in.');
 			btnLogout.classList.add('hide');

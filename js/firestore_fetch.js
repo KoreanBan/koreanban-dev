@@ -15,33 +15,28 @@ const docRef = firestore.collection('koreanbap-cuisines');
 var cuisines_fetch = new Vue({
 	el:"#cuisineFetch",
 	data:{
-		food_name:"This is title",
-		food_desc:"This is description",
-		food_origin:"This is origin",
+		food_name:"",
+		food_desc:"",
+		food_origin:"",
 		ingredient_list: [
 			{
-				quantity:"1000",
-				list:"Test"
+				quantity:"",
+				list:""
 			}
 		],
 		recipes_list: [
 			{
-				list:"Test"
+				list:""
 			}
 		]
 	},
 	methods:{
 		fetchContent: function(){
-			firestore.collection('koreanbap-cuisines').get().then(function(doc){
-				if(doc.exists){
-					console.log(doc.data());
-				} else {
-					console.log("No doc here");
-				}
-			}).catch(function(error){
-				console.log("Error getting docs:", error)
-			});
+			firestore.collection("koreanbap-cuisines").orderBy("food_name", "desc");
 		}
+	},
+	ready() {
+		this.fetchContent()
 	}
 });
 
