@@ -10,13 +10,18 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link href="css/suggestion.css" rel="stylesheet">
+  <!-- Vue.js -->
+  <!-- <script src="node_modules/vue/dist/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/comps.js"></script>
   <title>KoreanBap | Suggestion | Spicy Korean Fried Chicken</title>
 </head>
 <body>
+  <div id="searchFunc">
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-sm navbar-light bg-white fixed-top pb-3">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pb-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="cuisuine.html">
         <img src="assets/logo/logo.svg" width="150px">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
@@ -25,38 +30,27 @@
 
     <div class="collapse navbar-collapse" id="navbarContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item px-3">
+        <li class="nav-item px-3 d-md-flex justify-content-center">
+          <search></search>
+        </li>
+        <li class="nav-item px-3 d-md-flex justify-content-center">
           <a href="index.html" class="nav-link text-sm-center text-lg-center text-md-center"><span><img src="assets/icons/icon - home.png" class="m-3 d-lg-block d-md-block"></span>Home</a>
         </li>
-        <li class="nav-item px-3 dropdown">
-          <a class="nav-link dropdown-toggle text-sm-center text-lg-center text-md-center" href="cuisuine.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="Dropdown"><span><img src="assets/icons/icon - cuisuine.png" class="m-3 d-lg-block d-md-block"></span>Cuisine
+        <li class="nav-item px-3 d-md-flex justify-content-center">
+          <a class="nav-link text-sm-center text-lg-center text-md-center" href="cuisuine.html"><span><img src="assets/icons/icon - cuisuine.png" class="m-3 d-lg-block d-md-block"></span>Cuisuine
           </a>
-          <div class="dropdown-menu" arial-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="food_kfc.html">Spicy Korean Fried Chicken</a>
-            <a class="dropdown-item" href="#">Kimchi Fried Rice</a>
-            <a class="dropdown-item" href="#">Agwi-jjim</a>
-            <a class="dropdown-item" href="#">Korean Pancake</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Tteok-Bokki</a>
-            <a class="dropdown-item" href="#">Sundae</a>
-            <a class="dropdown-item" href="#">Milmyeon</a>
-            <a class="dropdown-item" href="#">Spicy Noodle</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Bungeoppang</a>
-            <a class="dropdown-item" href="#">Hotteok</a>
-          </div>
         </li>
-        <li class="nav-item px-3">
+        <li class="nav-item px-3 d-md-flex justify-content-center">
           <a href="suggestion.html" class="nav-link text-sm-center text-lg-center text-md-center"><span><img src="assets/icons/icon - Suggestion.png" class="m-3 d-md-block d-lg-block"></span>Suggestion</a>
         </li>
-        <li class="nav-item px-3">
+        <li class="nav-item px-3 d-md-flex justify-content-center">
           <a href="contact.html" class="nav-link text-sm-center text-lg-center text-md-center"><span><img src="assets/icons/icon - Contact.png" class="m-3 d-md-block d-lg-block"></span>Contact</a>
         </li>
       </ul>
     </div>
     </div>
   </nav>
-
+  <form></form>
   <!-- FORM HEADER -->
   <header id="suggestion-section">
       <div class="dark-overlay">
@@ -122,21 +116,23 @@
         <div class="row">
           <div class="col text-center">
             <div class="py-5">
-              <p class="lead text-light" id="contact">
+              <p id="contact">
                 If you have any questions feel free to contact us
               </p>
               <p>Copyright &copy; 2019 Korean BOP</p>
-              <i class='fas fa-envelope fa-lg'></i>
-              <span>KoreanBop@gmail.com &nbsp;</span> 
-              <span class="text-light">OR &nbsp;</span>
-              <i class="fa fa-phone fa-lg"></i>
-              <span>778-836-2243</span>
+              <i class='fas fa-envelope fa-lg'></i>&nbsp;
+               <span>KoreanBop@gmail.com |</span> 
+              <i class="fa fa-phone fa-lg"></i>&nbsp;
+               <span>778-836-2243</span>
             </div>
           </div>
         </div>
       </div>
     </footer>
+  </div>  
 
+
+<script src="js/firestore_search.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
