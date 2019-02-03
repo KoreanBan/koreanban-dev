@@ -15,63 +15,33 @@ const docRef = firestore.collection('koreanbap-cuisines');
 var cuisines_fetch = new Vue({
 	el:"#cuisineFetch",
 	data:{
-		food_image:"",
-		food_name:"",
-		food_desc:"",
-		food_origin:"",
-		food_url:"",
+		food_name:"This is title",
+		food_desc:"This is description",
+		food_origin:"This is origin",
 		ingredient_list: [
 			{
-				quantity:"",
-				list:""
+				quantity:"1000",
+				list:"Test"
 			}
 		],
 		recipes_list: [
 			{
-				list:""
+				list:"Test"
 			}
 		]
 	},
-	methods:{
-		saveButton: function(){
-			var image = this.food_image;
-			var name = this.food_name;
-			var description = this.food_desc;
-			var origin = this.food_origin;
-			var origin_url = this.food_url;
-			var ingredients = this.ingredient_list;
-			var recipes = this.recipes_list;
-			console.log("Saving to Firestore DB:" + image, name, description, origin, origin_url);
-			firestore.collection("koreanbap-cuisines").add({
-				food_image: image,
-				food_name: name,
-				food_desc: description,
-				food_origin: origin,
-				food_url: origin_url,
-				food_ingredients: ingredients,
-				food_recipes: recipes
-			}).then(function(docRef){
-				console.log("Status saved!", docRef.id);
+	mounted:{
+		fetchContent: function(){
+			firestore.collection('koreanbap-cuisines').get().then(function(doc){
+				if(doc.exists){
+					console.log(doc.data());
+				} else {
+					console.log("No doc here");
+				}
 			}).catch(function(error){
-				console.log(error);
-			})
+				console.log("Error getting docs:", error)
+			});
 		},
-		addInputIng: function(){
-			this.ingredient_list.push({
-				list:""
-			})
-		},
-		addInputRec: function(){
-			this.recipes_list.push({
-				list:""
-			})
-		},
-		deleteInputIng: function(index){
-			this.ingredient_list.splice(index, 1)
-		},
-		deleteInputRec: function(index){
-			this.recipes_list.splice(index, 1)
-		}
 	}
 });
 
