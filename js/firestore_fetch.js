@@ -10,10 +10,10 @@ var config = {
 firebase.initializeApp(config);
 var firestore = firebase.firestore();
 
-const docRef = firestore.collection('koreanbap-cuisines').doc();
+const docRef = firestore.collection('koreanbap-cuisines');
 
-var cuisines_admin = new Vue({
-	el:"#cuisines",
+var cuisines_fetch = new Vue({
+	el:"#cuisineFetch",
 	data:{
 		food_image:"",
 		food_name:"",
@@ -74,3 +74,4 @@ var cuisines_admin = new Vue({
 		}
 	}
 });
+
