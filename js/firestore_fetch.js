@@ -30,7 +30,7 @@ var cuisines_fetch = new Vue({
 			}
 		]
 	},
-	mounted:{
+	methods:{
 		fetchContent: function(){
 			firestore.collection('koreanbap-cuisines').get().then(function(doc){
 				if(doc.exists){
@@ -41,7 +41,7 @@ var cuisines_fetch = new Vue({
 			}).catch(function(error){
 				console.log("Error getting docs:", error)
 			});
-		},
+		}
 	}
 });
 
