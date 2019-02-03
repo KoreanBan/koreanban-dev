@@ -22,6 +22,7 @@ var cuisines_admin = new Vue({
 		food_url:"",
 		ingredient_list: [
 			{
+				quantity:"",
 				list:""
 			}
 		],
