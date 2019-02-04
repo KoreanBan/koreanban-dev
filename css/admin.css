@@ -1,8 +1,89 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,800');
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --main-color:#0061aa;
+  --secondary-color:#ee3b33;
+  --grey-color:#5d737e;
+  --bright-color:#F9F9F9;
+  --text-color:#4a4a4a;
+  /* Overlay */
+  --dark-overlay:rgba(0, 0, 0,0.9);
+  /* Font Family */
+  --font-main:'Open Sans', sans-serif;
+  --font-secondary:'Raleway',sans-serif;
+}
+
 .hide {
-	display: none;
+	display: none !important;
 }
 
 #formStyle {
 	width: 100vw;
 	height: 100vh;
+}
+
+/* Global */
+html, body {
+  margin:0;
+  line-height:1.8em;
+}
+
+.wrapper {
+  min-height:100vh;
+}
+
+.logo {
+	width:300px;
+	min-height:100px;
+}
+
+/* Form/Left/Top Page */
+.form {
+  background-color:var(--bright-color);
+}
+
+.form h2 {
+  font-family:var(--font-main);
+  font-weight:800;
+  color:var(--text-color);
+}
+
+.form p {
+  font-family:var(--font-secondary);
+  color:var(--grey-color);
+  white-space: pre-line;
+}
+
+.form button {
+  background-color:var(--main-color);
+  color:var(--bright-color);
+}
+
+.form button:hover {
+  background-color:var(--secondary-color);
+}
+
+/* Description/Right/Bottom Page */
+.description {
+  background-color:var(--text-color);
+}
+
+.description .quote {
+  color:var(--bright-color);
+  font-family:var(--font-secondary);
+}
+
+.description .far {
+  width:50px;
+}
+
+.description p {
+  font-style:italic; 
+  text-align:justify;
+  opacity:0.7;
+  letter-spacing:1;
 }

@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Admin</title>
+		<title>KoreanBap | Admin</title>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/admin.css" rel="stylesheet" type="text/css" />
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<!-- Font Awesome -->
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<!-- Vue -->
 		<script src="node_modules/vue/dist/vue.js"></script>
 		<!-- Firebase -->
@@ -11,31 +18,71 @@
 		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
 	</head>
-
 	<body>
-		<div>
-			<header>
-				<div>
-					<h1>Admin Login</h1>
+		<div class="wrapper d-flex flex-row flex-wrap flex-md-nowrap">
+			<!-- Form Section -->
+			<section class="d-flex flex-column form container-fluid align-items-center pb-5">
+				<article class="d-flex flex-column px-5">
+					<img src="assets/logo/logo.svg" class="logo align-self-center py-5">
+					<h2>Admin Login</h2>
+					<p class="lead">Enter an email and password below and sign in to an existing account. 
+					To get access to the admin area, please contact the administrator.</p>
+				</article>
+				<div class="form-group pt-3">
+					<input class="form-control" type="text" id="email" name="email" placeholder="Email"/>
 				</div>
-			</header>
-	
-			<div>
-				<p>Enter an email and password below and sign in to an existing account. To get access to the admin area, please contact the administrator.</p>
-				<input type="text" id="email" name="email" placeholder="Email"/>
-				<br/><br/>
-				<input type="password" id="password" name="password" placeholder="Password"/>
-				<br/><br/>
-				<button id="login" name="login" class="hide">Log In</button>
-				<button id="logout" name="logout" class="hide">Log Out</button>
-			</div>		
+				<div class="form-group">
+					<input class="form-control" type="password" id="password" name="password" placeholder="Password"/>
+				</div>
+				<button id="login" name="login" class="btn hide">Log In</button>
+				<button id="logout" name="logout" class="btn hide">Log Out</button>
+				<div id="form"></div>
+			</section>
+			<!-- Description Section -->
+			<section class="description container-fluid justify-content-center align-items-center d-flex d-sm-none d-lg-flex p-5">
+				<article class="inner_description">
+					<div class="quote d-flex flex-row mb-3">
+						<div class="align-self-start">
+							<span class="icon_color">
+								<i class="far fa-lightbulb fa-3x mx-4"></i>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<h4>Get an access to quick and permission-free changes</h4>
+							<p>You do not have to wait for a reply or a permission once you acquire an administrator account</p>
+						</div>
+					</div>
+					<div class="quote d-flex flex-row mb-3">
+						<div class="align-self-start">
+							<span class="icon_color">
+								<i class="fas fa-graduation-cap fa-3x mx-4"></i>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<h4>Learn Korean Culture and Food at a glance</h4>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, libero?</p>
+						</div>
+					</div>
+					<div class="quote d-flex flex-row">
+						<div class="align-self-start">
+							<span class="icon_color">
+								<i class="far fa-images fa-3x mx-4"></i>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<h4>Get along with Korean Bop Staff</h4>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id laborum architecto ullam reiciendis eveniet distinctio!</p>
+						</div>
+					</div>
+				</article>
+			</section>		
 		</div>
 		
-		<br/>
-		
-		<div id="form"></div>
-		
+
+		<!-- JavaScript Files -->
 		<script src="js/firestore_admin.js"></script>
-		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	</body>
 </html>
