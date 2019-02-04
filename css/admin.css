@@ -34,11 +34,16 @@ html, body {
 
 .wrapper {
   min-height:100vh;
+  padding:0;
 }
 
 .logo {
 	width:300px;
 	min-height:100px;
+}
+
+.description .far {
+  width:50px;
 }
 
 /* Form/Left/Top Page */
@@ -48,7 +53,7 @@ html, body {
 
 .form h2 {
   font-family:var(--font-main);
-  font-weight:800;
+  font-weight:600;
   color:var(--text-color);
 }
 
@@ -56,6 +61,7 @@ html, body {
   font-family:var(--font-secondary);
   color:var(--grey-color);
   white-space: pre-line;
+  font-size:1rem;
 }
 
 .form button {
@@ -77,13 +83,10 @@ html, body {
   font-family:var(--font-secondary);
 }
 
-.description .far {
-  width:50px;
-}
-
 .description p {
   font-style:italic; 
   text-align:justify;
   opacity:0.7;
-  letter-spacing:1;
+  letter-spacing:0.1rem;
+  font-size:0.9rem;
 }
