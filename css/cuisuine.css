@@ -1,4 +1,3 @@
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Raleway:500');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600,800');
 
@@ -16,101 +15,439 @@
   --font-main:'Open Sans', sans-serif;
   --font-secondary:'Raleway',sans-serif;
 }
-/* Navigation */
 
-.nav-item a{
-  font-family:var(--font-main);
-  color:var(--link-color);
+.navbar-nav{
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
+body {
+    background-color: antiquewhite
+}
 /* Icons */
 .nav-item img {
   width:70px;
   height:50px;
 }
-
-/* HeroImage */
-#heroImage {
-  background:url('/assets/food/Sweet\ and\ Sour\ Chicken_opt.jpg');
-  min-height:800px;
-  background-size:cover;
-  background-attachment:fixed;
+/* Image */
+.container{
+  max-width: 1800px;
+  width: 100%;
+  position: relative;
+}
+.down{
+  padding-top:45px
+}
+.header{
+  padding-top: 200px;
+  text-align: center;
 }
 
-.dark-overlay{
-  background-color:var(--dark-overlay);
+/* Hover */
+
+/*
+.main-three {
+  position: relative;
+}
+*/
+/*
+.rounded-three {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+*/
+.main {
+  position: relative;
+}
+
+.button-one {
+  transition: .5s ease;
+  opacity: 0;
   position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  min-height:800px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.home-inner {
-  padding-top:270px;
+.rounded {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
 }
 
-header h1 {
-  font-family:var(--font-main);
-  font-weight:600;
+.main:hover .rounded {
+  opacity: 0.3;
 }
-
-header hr {
-  border:1px solid var(--secondary-color);
+.main:hover .button-one {
+  opacity: 1;
 }
-
-header p {
-  font-family:'Raleway',sans-serif;
-  color:var(--bright-color);
-}
-
-/* Origin & Ingredients */
-
-/* Buttons */
-#origin_ing button{
+.btn {
   background-color:var(--main-color);
-  color:var(--bright-color);
-  font-family:'Open Sans',sans-serif;
+  color: white;
+  font-size: 20px;
+  padding: 25px 50px;
 }
 
-#origin_ing button:hover{
-  background-color:var(--secondary-color);
+.main-two {
+  position: relative;
 }
 
-/* Receipes */
-#receipe h3 {
-  font-family:var(--font-main);
-  font-weight:600;
+.button-two {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-#receipe h2 {
-  font-family:var(--font-main);
+.rounded-two {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
 }
 
-#receipe p {
-  font-family:var(--font-secondary);
+.main-two:hover .rounded-two {
+  opacity: 0.3;
+}
+.main-two:hover .button-two {
+  opacity: 1;
+}
+.btn {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 20px;
+  padding: 25px 50px;
+}
+.main-three {
+  position: relative;
 }
 
-#receipe .container {
-  padding-top:10px;
+.button-three {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-#receipe .row p {
-  color:var(--text-color);
+.rounded-three {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
 }
 
-/* Footer */
-footer {
-  background-color:var(--grey-color);
+.main-three:hover .rounded-three {
+  opacity: 0.3;
+}
+.main-three:hover .button-three {
+  opacity: 1;
+}
+.btn {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 20px;
+  padding: 25px 50px;
+}
+.main-four {
+  position: relative;
 }
 
-footer p, span {
-  font-family:var(--font-secondary);
+.button-four {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-/* Media Queries */
-@media only screen and (max-width:540px){
-  #receipe .container h2 {
-    font-size:3rem;
-  }
+.rounded-four {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
 }
+
+.main-four:hover .rounded-four {
+  opacity: 0.3;
+}
+.main-four:hover .button-four {
+  opacity: 1;
+}
+.btn {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 20px;
+  padding: 25px 50px;
+}
+.main-five {
+  position: relative;
+}
+
+.button-five {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.rounded-five {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+}
+
+.main-five:hover .rounded-five {
+  opacity: 0.3;
+}
+.main-five:hover .button-five {
+  opacity: 1;
+}
+.btn {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 20px;
+  padding: 25px 50px;
+}
+
+.main-six {
+  position: relative;
+}
+
+.button-six {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.rounded-six {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+}
+
+.main-six:hover .rounded-six {
+  opacity: 0.3;
+}
+.main-six:hover .button-six {
+  opacity: 1;
+}
+.btn {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 20px;
+  padding: 25px 50px;
+}
+
+.main-seven {
+  position: relative;
+}
+
+.button-seven {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.rounded-seven {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+}
+
+.main-seven:hover .rounded-seven {
+  opacity: 0.3;
+}
+.main-seven:hover .button-seven {
+  opacity: 1;
+}
+.btn {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 20px;
+  padding: 25px 50px;
+}
+
+.main-eight {
+  position: relative;
+}
+
+.button-eight {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.rounded-eight {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+}
+
+.main-eight:hover .rounded-eight {
+  opacity: 0.3;
+}
+.main-eight:hover .button-eight {
+  opacity: 1;
+}
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--bright-color);
+}
+.btn {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 20px;
+  padding: 25px 50px;
+}
+
+.main-nine {
+  position: relative;
+}
+
+.button-nine {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.rounded-nine {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+}
+
+.main-nine:hover .rounded-nine {
+  opacity: 0.3;
+}
+.main-nine:hover .button-nine {
+  opacity: 1;
+}
+.btn {
+  background-color:var(--main-color);
+  color: white;
+  font-size: 20px;
+  padding: 25px 50px;
+}
+
+
+
+/*
+.middle-three {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+*/
+
+/*
+.main-three:hover .rounded-three {
+  opacity: 0.3;
+}
+.main-three:hover .middle-three {
+  opacity: 1;
+}
+*/
+
+/*
+.three {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+*/
+/*
+.rounded {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+#main:hover .rounded {
+  opacity: 0.3;
+}
+
+#main:hover .middle {
+  opacity: 1;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  padding: 25px 50px;
+}
+*/
