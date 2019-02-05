@@ -16,12 +16,11 @@
   --font-secondary:'Raleway',sans-serif;
 }
 
-
-
 .navbar-nav{
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
 }
+
 body {
     background-color: antiquewhite
 }
@@ -31,7 +30,6 @@ body {
   height:50px;
 }
 /* Image */
-.
 .container{
   max-width: 1800px;
   width: 100%;
