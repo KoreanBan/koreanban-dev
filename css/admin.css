@@ -78,6 +78,10 @@ html, body {
   background-color:var(--text-color);
 }
 
+.description h4 {
+  font-family:var(--font-main);
+}
+
 .description .quote {
   color:var(--bright-color);
   font-family:var(--font-secondary);
@@ -87,6 +91,6 @@ html, body {
   font-style:italic; 
   text-align:justify;
   opacity:0.7;
-  letter-spacing:0.1rem;
+  letter-spacing:0.03em;
   font-size:0.9rem;
 }

@@ -65,7 +65,7 @@
 
 /* Footer */
 footer {
-  background-color:var(--grey-color);
+  background-color:var(-bright-color);
 }
 
 footer p, span {

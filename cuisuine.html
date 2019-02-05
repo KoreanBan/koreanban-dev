@@ -4,42 +4,46 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/cuisuine.css">
-     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="css/cuisuine.css" rel="stylesheet">
+    <!-- Vue.js -->
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <title>KoreanBap | Cuisuine</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-white fixed-top pb-3">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/logo/logo.svg" width="150px">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item px-3">
-          <a href="index.html" class="nav-link text-sm-center text-lg-center text-md-center"><span><img src="assets/icons/icon - home.png" class="m-3 d-lg-block d-md-block"></span>Home</a>
-        </li>
-         <li class="nav-item px-3">
-          <a href="cuisuine.html" class="nav-link text-sm-center text-lg-center text-md-center"><span><img src="assets/icons/icon%20-%20cuisuine.png" class="m-3 d-lg-block d-md-block"></span>Cuisine</a>
-        </li>
-        <li class="nav-item px-3">
-          <a href="suggestion.html" class="nav-link text-sm-center text-lg-center text-md-center"><span><img src="assets/icons/icon - Suggestion.png" class="m-3 d-md-block d-lg-block"></span>Suggestion</a>
-        </li>
-        <li class="nav-item px-1">
-          <a href="contact.html" class="nav-link text-sm-center text-lg-center text-md-center"><span><img src="assets/icons/icon - Contact.png" class="m-3 d-md-block d-lg-block"></span>Contact</a>
-        </li>
-      </ul>
-    </div>
-    </div>
-  </nav>
+    <div id="searchFunc">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/logo/logo.svg" width="150px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item pt-3 px-3 d-md-flex justify-content-center">
+              <search></search>
+          </li>
+          <li class="nav-item px-3">
+            <a href="index.html" class="nav-link text-sm-center text-lg-center text-md-center"><span><img src="assets/icons/icon - home.png" class="m-3 d-lg-block d-md-block"></span>Home</a>
+          </li>
+          <li class="nav-item px-3">
+            <a href="cuisuine.html" class="nav-link text-sm-center text-lg-center text-md-center"><span><img src="assets/icons/icon%20-%20cuisuine.png" class="m-3 d-lg-block d-md-block"></span>Cuisine</a>
+          </li>
+          <li class="nav-item px-3">
+            <a href="suggestion.html" class="nav-link text-sm-center text-lg-center text-md-center"><span><img src="assets/icons/icon - Suggestion.png" class="m-3 d-md-block d-lg-block"></span>Suggestion</a>
+          </li>
+          <li class="nav-item px-1">
+            <a href="contact.html" class="nav-link text-sm-center text-lg-center text-md-center"><span><img src="assets/icons/icon - Contact.png" class="m-3 d-md-block d-lg-block"></span>Contact</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
     <h1 class="display-3 header">Cuisuines</h1>
     <div class="container">
       <div class="down">
@@ -100,22 +104,17 @@
         </div>
         <div class="col-md-4 col-sm-12 main">
         <img src="assets/food/Sundae_opt.jpg" class="img-fluid rounded">
-            <div class="button-one">
-              <a class="btn" href="food.html" role="button">Food 9</a>
-          </div>
+          <div class="button-one">
+            <a class="btn" href="food.html" role="button">Food 9</a>
         </div>
+       </div>
       </div>
-      </div>
-
-    
-    
-    
-    
+     </div>
+    </div>  
     
     
    <!-- Footer -->
 <footer class="page-footer font-small blue">
-
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">
     <p>Copyright &copy; 2019 Korean BOP</p>
@@ -126,9 +125,12 @@
 <!-- Footer -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- Essential Scripts -->
+    <script src="js/comps.js"></script>
+    <script src="js/firestore_cuisine.js"></script>
+    <script src="js/firestore_search.js"></script>
   </body>
 </html>
