@@ -59,9 +59,9 @@
 						<div class="home-inner">
 							<div class="container">
 								<div class="jumbotron jumbotron-fluid text-center bg-transparent">
-									<h1 class="display-3 text-white">{{food_name}}</h1>
+									<h1 class="display-3 text-white" v-for="n in food_name">{{n}}</h1>
 									<hr class="my-4">
-									<p class="lead">{{food_desc}}</p>
+									<p class="lead" v-for="d in food_desc">{{d}}</p>
 								</div>
 							</div>
 						</div>
@@ -78,7 +78,7 @@
 										<div class="card-body">
 											<h5 class="card-title"><strong>Origin</strong></h5>
 											<hr class="my-2">
-											<p class="card-text">{{food_origin}}</p>	
+											<p class="card-text" v-model="o in food_origin">{{o}}</p>	
 											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7068414.293272505!2d98.4465403498163!3d30.112105053608925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36e4e73368bdcdb3%3A0xde8f7ccf8f99feb9!2sSichuan%2C+China!5e0!3m2!1sen!2sca!4v1549153200124" class="img-fluid img-thumbnail rounded mx-auto d-block" frameborder="0" style="border:0" allowfullscreen></iframe>
 											<div class="d-flex justify-content-center col-lg-12">
 												<button type="button" class="btn btn-lg mt-3">
