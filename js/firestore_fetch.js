@@ -10,7 +10,7 @@ var config = {
 firebase.initializeApp(config);
 var firestore = firebase.firestore();
 
-const docRef = firestore.collection('koreanbap-cuisines');
+const docRef = firestore.collection('koreanbap-cuisines').doc("tMD4weiXMH0zLOUB0raX");
 
 var cuisines_fetch = new Vue({
 	el:"#cuisineFetch",
@@ -32,7 +32,15 @@ var cuisines_fetch = new Vue({
 	},
 	methods:{
 		fetchContent: function(){
-			firestore.collection("koreanbap-cuisines").orderBy("food_name", "desc");
+			docRef.get().then(function(doc){
+				if(doc.exists){
+					console.log("Document data:", doc.data());
+				} else {
+					console.log("No data!");
+				}
+			}).catch(function(error){
+				console.log("Error getting document:", error);
+			});
 		}
 	},
 	ready() {

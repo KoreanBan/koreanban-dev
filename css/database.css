@@ -41,7 +41,16 @@ button.save:hover{
   background-color:var(--secondary-color);
 }
 
+#formStyle {
+	background-color: var(--bright-color);
+}
+
 /* Header */
+
+.wrapper {
+	background-color: var(--bright-color);
+}
+
 .wrapper h3 {
   font-family:var(--font-main);
   font-weight:800;
