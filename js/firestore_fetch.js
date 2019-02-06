@@ -15,31 +15,38 @@ const docRef = firestore.collection('koreanbap-cuisines');
 var cuisines_fetch = new Vue({
 	el:"#cuisineFetch",
 	data:{
-		food_name:"",
-		food_desc:"",
-		food_origin:"",
-		ingredient_list: [
-			{
-				quantity:"",
-				list:""
-			}
-		],
-		recipes_list: [
-			{
-				list:""
-			}
-		]
+    f:{
+      food_image:"",  
+      food_name:"",
+      food_desc:"",
+      food_origin:"",
+      food_ingredients: [
+        {
+          quantity:"",
+          list:""
+        }
+      ],
+      recipes_list: [
+        {
+          list:""
+        }
+      ]
+    }
 	},
-	methods:{
-		fetchContent: function(){
-			firestore.collection('koreanbap-cuisines').where("tMD4weiXMH0zLOUB0raX", "==", "true").get().then(function(querySnapshot){
-        querySnapshot.forEach(function(doc){
-          console.log(doc.id, "=>", doc.data());  
-        });
+	mounted:function(){
+			firestore.collection('koreanbap-cuisines').doc("tMD4weiXMH0zLOUB0raX").get().then((doc)=>{
+        console.log(doc.data());
+//        querySnapshot.forEach((doc)=>{
+//          console.log(doc)
+//          console.log(doc.id, "=>", doc.data());
+//          var obj = doc.data();
+//          this.food = obj
+//        });
+        var obj = doc.data();
+        this.f = obj;
       }).catch(function(error){
         console.log("Error getting documents:", error);
       });
 		}
-	}
 });
 

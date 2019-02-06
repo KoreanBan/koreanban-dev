@@ -31,7 +31,7 @@
 
 /* HeroImage */
 #heroImage {
-  background:url('/assets/food/Sweet\ and\ Sour\ Chicken_opt.jpg');
+/*  background:url(../assets/food/Sweet_and_Sour_Chicken_opt.jpg);*/
   min-height:800px;
   background-size:cover;
   background-attachment:fixed;
