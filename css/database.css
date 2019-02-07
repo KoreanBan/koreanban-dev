@@ -4,62 +4,62 @@
 
 /* CSS Variables */
 :root {
-  /* Colors */
-  --main-color:#0061aa;
-  --secondary-color:#ee3b33;
-  --grey-color:#5d737e;
-  --bright-color:#F9F9F9;
-  --text-color:#4a4a4a;
-  /* Overlay */
-  --dark-overlay:rgba(0,0,0,0.7);
-  /* Font Family */
-  --font-main:'Open Sans', sans-serif;
-  --font-secondary:'Raleway',sans-serif;
+    /* Colors */
+    --main-color: #0061aa;
+    --secondary-color: #ee3b33;
+    --grey-color: #5d737e;
+    --bright-color: #F9F9F9;
+    --text-color: #4a4a4a;
+    /* Overlay */
+    --dark-overlay: rgba(0, 0, 0, 0.7);
+    /* Font Family */
+    --font-main: 'Open Sans', sans-serif;
+    --font-secondary: 'Raleway', sans-serif;
 }
 
 /* Global */
 
 label {
-  font-family: var(--font-secondary);
-  font-size:1rem;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
 }
 
 button {
-  background-color: var(--main-color);
-  color:var(--bright-color);  
+    background-color: var(--main-color);
+    color: var(--bright-color);
 }
 
 .delete {
-  background-color:var(--secondary-color);
+    background-color: var(--secondary-color);
 }
 
 button.save {
-  background-color:var(--main-color);
+    background-color: var(--main-color);
 }
 
-button.save:hover{
-  background-color:var(--secondary-color);
+button.save:hover {
+    background-color: var(--secondary-color);
 }
 
 #formStyle {
-	background-color: var(--bright-color);
+    background-color: var(--bright-color);
 }
 
 /* Header */
 
 .wrapper {
-	background-color: var(--bright-color);
+    background-color: var(--bright-color);
 }
 
 .wrapper h3 {
-  font-family:var(--font-main);
-  font-weight:800;
-  text-align: center;
-  color:var(--secondary-color);
+    font-family: var(--font-main);
+    font-weight: 800;
+    text-align: center;
+    color: var(--secondary-color);
 }
 
 .wrapper h3 span {
-  color:var(--main-color);
+    color: var(--main-color);
 }
 
 

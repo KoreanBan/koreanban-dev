@@ -4,48 +4,48 @@
 
 /* CSS Variables */
 :root {
-  /* Colors */
-  --main-color:#0061aa;
-  --secondary-color:#ee3b33;
-  --grey-color:#5d737e;
-  --bright-color:#F9F9F9;
-  --text-color:#4a4a4a;
-  /* Overlay */
-  --dark-overlay:rgba(0, 0, 0,0.9);
-  /* Font Family */
-  --font-main:'Open Sans', sans-serif;
-  --font-secondary:'Raleway',sans-serif;
+    /* Colors */
+    --main-color: #0061aa;
+    --secondary-color: #ee3b33;
+    --grey-color: #5d737e;
+    --bright-color: #F9F9F9;
+    --text-color: #4a4a4a;
+    /* Overlay */
+    --dark-overlay: rgba(0, 0, 0, 0.9);
+    /* Font Family */
+    --font-main: 'Open Sans', sans-serif;
+    --font-secondary: 'Raleway', sans-serif;
 }
 
 .hide {
-	display: none !important;
+    display: none !important;
 }
 
 #formStyle {
-	width: 100vw;
-	height: 100vh;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Global */
 html, body {
-  margin:0;
-  line-height:1.8em;
+    margin: 0;
+    line-height: 1.8em;
 }
 
 .wrapper {
-  min-height:100vh;
-  padding:0;
-	width: 100%;
-	background-color:var(--bright-color);
+    min-height: 100vh;
+    padding: 0;
+    width: 100%;
+    background-color: var(--bright-color);
 }
 
 .logo {
-	width:300px;
-	min-height:100px;
+    width: 300px;
+    min-height: 100px;
 }
 
 .description .far {
-  width:50px;
+    width: 50px;
 }
 
 /* Form/Left/Top Page */
@@ -56,50 +56,50 @@ html, body {
 */
 
 .form h2 {
-  font-family:var(--font-main);
-  font-weight:600;
-  color:var(--text-color);
+    font-family: var(--font-main);
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 .form p {
-  font-family:var(--font-secondary);
-  color:var(--grey-color);
-  white-space: pre-line;
-  font-size:1rem;
+    font-family: var(--font-secondary);
+    color: var(--grey-color);
+    white-space: pre-line;
+    font-size: 1rem;
 }
 
 .form button {
-  background-color:var(--main-color);
-  color:var(--bright-color);
+    background-color: var(--main-color);
+    color: var(--bright-color);
 }
 
 .form button:hover {
-  background-color:var(--secondary-color);
+    background-color: var(--secondary-color);
 }
 
 /* Description/Right/Bottom Page */
 .description {
-  background-color:var(--text-color);
+    background-color: var(--text-color);
 }
 
 .description h4 {
-  font-family:var(--font-main);
+    font-family: var(--font-main);
 }
 
 .description .quote {
-  color:var(--bright-color);
-  font-family:var(--font-secondary);
+    color: var(--bright-color);
+    font-family: var(--font-secondary);
 }
 
 .description p {
-  font-style:italic; 
-  text-align:justify;
-  opacity:0.7;
-  letter-spacing:0.03em;
-  font-size:0.9rem;
+    font-style: italic;
+    text-align: justify;
+    opacity: 0.7;
+    letter-spacing: 0.03em;
+    font-size: 0.9rem;
 }
 
 #currUser {
-	text-align: center;
-	margin-top: 50px;
+    text-align: center;
+    margin-top: 50px;
 }
