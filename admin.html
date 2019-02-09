@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>KoreanBap | Admin</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/admin.css" rel="stylesheet" type="text/css"/>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <!-- Font Awesome -->
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'
-          integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Vue -->
-    <script src="node_modules/vue/dist/vue.js"></script>
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
+  <title>KoreanBap | Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/admin.css" rel="stylesheet" type="text/css"/>
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Font Awesome -->
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'
+        integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Vue -->
+  <script src="node_modules/vue/dist/vue.js"></script>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
 </head>
 <body>
 <div class="wrapper container-fluid d-flex d-flex-row">
-    <!-- Form Section -->
-    <section class="form d-flex flex-column col-md-6 container-fluid align-items-center pb-5">
-        <article class="d-flex flex-column px-5">
-            <img src="assets/logo/logo.svg" class="logo align-self-center py-5">
-            <h2>Admin Login</h2>
-            <p class="lead">Enter an email and password below and sign in to an existing account.
-                To get access to the admin area, please contact the administrator.</p>
-        </article>
-        <div class="form-group input-group-lg pt-3">
-            <input class="form-control" type="text" id="email" name="email" placeholder="Email"/>
-        </div>
-        <div class="form-group input-group-lg">
-            <input class="form-control" type="password" id="password" name="password" placeholder="Password"/>
-        </div>
-        <button id="login" name="login" class="btn hide">Log In</button>
-        <button id="logout" name="logout" class="btn hide">Log Out</button>
-        <div id="form"></div>
-    </section>
-    <!-- Description Section -->
-    <!--
-                <section class="description container-fluid justify-content-center align-items-center d-none d-lg-flex col-md-6 p-5">
-                    <article class="inner_description">
-                        <div class="quote d-flex flex-row mb-3">
-                            <div class="align-self-start">
-                                <span class="icon_color">
-                                    <i class="far fa-lightbulb fa-3x mx-4"></i>
-                                </span>
-                            </div>
-                            <div class="align-self-end">
-                                <h4>Get an access to quick and permission-free changes</h4>
-                                <p>You do not have to wait for a reply or a permission once you acquire an administrator account</p>
-                            </div>
-                        </div>
-                        <div class="quote d-flex flex-row mb-3">
-                            <div class="align-self-start">
-                                <span class="icon_color">
-                                    <i class="fas fa-graduation-cap fa-3x mx-4"></i>
-                                </span>
-                            </div>
-                            <div class="align-self-end">
-                                <h4>Learn Korean Culture and Food at a glance</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, libero?</p>
-                            </div>
-                        </div>
-                        <div class="quote d-flex flex-row">
-                            <div class="align-self-start">
-                                <span class="icon_color">
-                                    <i class="far fa-handshake fa-3x mx-4"></i>
-                                </span>
-                            </div>
-                            <div class="align-self-end">
-                                <h4>Get along with Korean Bap Staff</h4>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id laborum architecto ullam reiciendis eveniet distinctio!</p>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-    -->
+  <!-- Form Section -->
+  <section class="form d-flex flex-column col-md-6 container-fluid align-items-center pb-5">
+    <article class="d-flex flex-column px-5">
+      <img src="assets/logo/logo.svg" class="logo align-self-center py-5">
+      <h2>Admin Login</h2>
+      <p class="lead">Enter an email and password below and sign in to an existing account.
+        To get access to the admin area, please contact the administrator.</p>
+    </article>
+    <div class="form-group input-group-lg pt-3">
+      <input class="form-control" type="text" id="email" name="email" placeholder="Email"/>
+    </div>
+    <div class="form-group input-group-lg">
+      <input class="form-control" type="password" id="password" name="password" placeholder="Password"/>
+    </div>
+    <button id="login" name="login" class="btn hide">Log In</button>
+    <button id="logout" name="logout" class="btn hide">Log Out</button>
+    <div id="form"></div>
+  </section>
+  <!-- Description Section -->
+  <!--
+              <section class="description container-fluid justify-content-center align-items-center d-none d-lg-flex col-md-6 p-5">
+                  <article class="inner_description">
+                      <div class="quote d-flex flex-row mb-3">
+                          <div class="align-self-start">
+                              <span class="icon_color">
+                                  <i class="far fa-lightbulb fa-3x mx-4"></i>
+                              </span>
+                          </div>
+                          <div class="align-self-end">
+                              <h4>Get an access to quick and permission-free changes</h4>
+                              <p>You do not have to wait for a reply or a permission once you acquire an administrator account</p>
+                          </div>
+                      </div>
+                      <div class="quote d-flex flex-row mb-3">
+                          <div class="align-self-start">
+                              <span class="icon_color">
+                                  <i class="fas fa-graduation-cap fa-3x mx-4"></i>
+                              </span>
+                          </div>
+                          <div class="align-self-end">
+                              <h4>Learn Korean Culture and Food at a glance</h4>
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, libero?</p>
+                          </div>
+                      </div>
+                      <div class="quote d-flex flex-row">
+                          <div class="align-self-start">
+                              <span class="icon_color">
+                                  <i class="far fa-handshake fa-3x mx-4"></i>
+                              </span>
+                          </div>
+                          <div class="align-self-end">
+                              <h4>Get along with Korean Bap Staff</h4>
+                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id laborum architecto ullam reiciendis eveniet distinctio!</p>
+                          </div>
+                      </div>
+                  </article>
+              </section>
+  -->
 </div>
 
 
