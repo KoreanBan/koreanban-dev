@@ -1,11 +1,3 @@
-Vue.component('ingredientList', {
-	props:["ingNum", "ingField"],
-	template:"<tr>\
-							<td>{{ingNum}}.</td>\
-							<td>{{ingField}}</td>\
-						</tr>"
-});
-
 Vue.component('search', {
 	template:'\
 	<form class="form-inline">\

@@ -32,7 +32,7 @@
 /* FORM HEADER */
 
 #suggestion-section {
-    background: url('/assets/food/pattern.jpg');
+    background: url('../assets/food/pattern.jpg');
     min-height: 800px;
     background-size: cover;
     background-attachment: fixed;

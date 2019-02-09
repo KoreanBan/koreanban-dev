@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Korean Bap | Cuisines Database | User Suggestion</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/database.css" rel="stylesheet" type="text/css">
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<!-- Font Awesome -->
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Vue -->
+		<script src="node_modules/vue/dist/vue.js"></script>
+		<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
+	</head>
+	<body>
+		<div class="wrapper container" id="cuisines_suggestion">
+			<div class="row">
+				<div>
+					<button>
+						<a href="cuisine_database.html" style="color: white">ADD</a>
+					</button>	
+					<button>
+						<a href="cuisine_edit.html" style="color: white">EDIT</a>
+					</button>
+					<button>
+						<a href="cuisine_suggest.html" style="color: white">SUGGESTION</a>
+					</button>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h3 class="p-3 my-3">Restricted Area
+						<span class=" d-block">Cuisines Database | User Suggestion</span>
+					</h3>
+
+					<!-- Suggestion List -->
+					<div class="row">
+						<table>
+							<tr>
+								<th>User Name</th>
+								<th>User Email</th>
+								<th>User Suggestion</th>
+							</tr>
+							<tr>
+								<td>{{s.suggest_name}}</td>
+								<td>{{s.suggest_email}}</td>
+								<td>{{s.suggest_content}}</td>
+								<td>
+									<button>Delete</button>
+								</td>
+							</tr>
+							<tr>
+								<td>{{s.suggest_name}}</td>
+								<td>{{s.suggest_email}}</td>
+								<td>{{s.suggest_content}}</td>
+								<td>
+									<button>Delete</button>
+								</td>
+							</tr>
+							<tr>
+								<td>{{s.suggest_name}}</td>
+								<td>{{s.suggest_email}}</td>
+								<td>{{s.suggest_content}}</td>
+								<td>
+									<button>Delete</button>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- External JS -->
+		<script src="js/firestore_suggest_display.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	</body>
+</html>
