@@ -25,7 +25,7 @@ var cuisines_edit = new Vue({
           list:""
         }
       ],
-      recipes_list: [
+      food_recipes: [
         {
           list:""
         }
