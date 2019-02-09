@@ -1,113 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Korean Bap | Cuisines</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/database.css" rel="stylesheet" type="text/css">
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <!-- Font Awesome -->
-  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'
-        integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- Vue -->
-  <script src="node_modules/vue/dist/vue.js"></script>
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
-</head>
-<body>
-<div class="wrapper container" id="cuisines">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12">
-      <h3 class="p-3 my-3">Restricted Area <span class="
-						d-block">Cuisines Database</span></h3>
-      <!-- Name and Image URL -->
-      <div class="d-flex flex-row flex-wrap">
-        <div class="form-group col-lg-6">
-          <i class="fas fa-signature"></i>
-          <label for="foodName" class="foodName">Food Name</label>
-          <input type="text" class="form-control form-control-lg" id="food_name" placeholder="Food Name"
-                 v-model="food_name"/>
-        </div>
-        <div class="form-group col-lg-6">
-          <i class="far fa-image"></i>
-          <label for="url" class="url">Food Image URL</label>
-          <input type="text" class="form-control form-control-lg" id="food_image" placeholder="Image URL"
-                 v-model="food_image"/>
-        </div>
-      </div>
-      <!-- Food Description -->
-      <div class="form-group col-lg-12">
-        <i class="fas fa-scroll"></i>
-        <label for="description" class="food_desc">Food Description</label>
-        <textarea class="form-control" id="food_desc" rows="10" cols="70" placeholder="Food Description"
-                  v-model="food_desc"></textarea>
-      </div>
-      <!-- Food Origin and Google Map URL -->
-      <div class="d-flex flex-row flex-wrap">
-        <div class="form-group col-lg-6">
-          <i class="fas fa-globe-asia"></i>
-          <label for="origin" class="food_origin">Food Origin</label>
-          <input type="text" class="form-control" id="food_origin" placeholder="Food Origin"
-                 v-model="food_origin"/>
-        </div>
-        <div class="form-group col-lg-6">
-          <i class="fas fa-map-marker-alt"></i>
-          <label>Google Maps URL</label>
-          <input class="form-control" type="text" id="food_url" placeholder="Google Maps URL"
-                 v-model="food_url"/>
-        </div>
-      </div>
-      <!-- Ingridients -->
-      <div class="form-group col-lg-12">
-        <i class="fas fa-carrot"></i>
-        <label for="ingredients">Food Ingredients</label>
-        <div class="mb-2" v-for="(i, index) in ingredient_list">
-          <div class="d-flex flex-row flex-wrap" index="index">
-            <div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
-              <input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients"
-                     v-model="i.list"/>
-              <input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity"
-                     v-model="i.quantity"/>
-            </div>
-            <div class="mt-md-1">
-              <button class="btn" @click="addInputIng()">Add more ingredients</button>
-              <button class="btn delete ml-1" @click="deleteInputIng(index)">X</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Reciepes -->
-      <div class="form-group col-lg-12">
-        <i class="fas fa-list-ul"></i>
-        <label for="reciepes">Food Recipes</label>
-        <div class="mb-2 d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap"
-             v-for="(r, index) in recipes_list">
-          <div class="mr-3 my-1 my-sm-1" index="index">
-            <input class="form-control" type="text" placeholder="Recipes" v-model="r.list"/>
-          </div>
-          <div class="mt-1">
-            <button class="btn" @click="addInputRec()">Add more recipes</button>
-            <button class="btn delete ml-1" @click="deleteInputRec(index)">X</button>
-          </div>
-        </div>
-        <button class="btn save mt-3" @click="saveButton()">Save Data</button>
-      </div>
-    </div>
-  </div>
-</div>
-<script src="js/firestore_cuisine.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-</body>
+	<head>
+		<title>Korean Bap | Cuisines Database | Add Items</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/database.css" rel="stylesheet" type="text/css">
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<!-- Font Awesome -->
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Vue -->
+		<script src="node_modules/vue/dist/vue.js"></script>
+		<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
+	</head>
+	<body>
+		<div class="wrapper container" id="cuisines">
+			<div class="row">
+				<button>
+					<a href="cuisine_database.html">ADD</a>
+				</button>	
+				<button>
+					<a href="cuisine_edit.html">EDIT</a>
+				</button>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h3 class="p-3 my-3">Restricted Area
+						<span class=" d-block">Cuisines Database | Add Database</span>
+					</h3>
+					<!-- Name and Image URL -->
+					<div class="d-flex flex-row flex-wrap">
+						<div class="form-group col-lg-6">
+							<i class="fas fa-signature"></i>
+							<label for="foodName" class="foodName">Food Name</label>
+							<input type="text" class="form-control form-control-lg" id="food_name" placeholder="Food Name" v-model="food_name"/>
+						</div>
+						<div class="form-group col-lg-6">
+							<i class="far fa-image"></i>
+							<label for="url" class="url">Food Image URL</label>
+							<input type="text" class="form-control form-control-lg" id="food_image" placeholder="Image URL" v-model="food_image"/>
+						</div>
+					</div>
+
+					<!-- Food Description -->
+					<div class="form-group col-lg-12">
+						<i class="fas fa-scroll"></i>
+						<label for="description" class="food_desc">Food Description</label>
+						<textarea class="form-control" id="food_desc" rows="10" cols="70" placeholder="Food Description" v-model="food_desc"></textarea>
+					</div>
+
+					<!-- Food Origin and Google Map URL -->
+					<div class="d-flex flex-row flex-wrap">
+						<div class="form-group col-lg-6">
+							<i class="fas fa-globe-asia"></i>
+							<label for="origin" class="food_origin">Food Origin</label>
+							<input type="text" class="form-control" id="food_origin" placeholder="Food Origin" v-model="food_origin"/>
+						</div>
+						<div class="form-group col-lg-6">
+							<i class="fas fa-map-marker-alt"></i>
+							<label>Google Maps URL</label>
+							<input class="form-control" type="text" id="food_url" placeholder="Google Maps URL" v-model="food_url"/>
+						</div>
+					</div>
+
+					<!-- Ingredients -->
+					<div class="form-group col-lg-12">
+						<i class="fas fa-carrot"></i>
+						<label for="ingredients">Food Ingredients</label>
+						<div class="mb-2" v-for="(i, index) in ingredient_list">
+							<div class="d-flex flex-row flex-wrap" index="index">
+								<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+									<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="i.list"/>
+									<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="i.quantity"/>
+								</div>
+								<div class="mt-md-1">
+									<button class="btn" @click="addInputIng()">Add more ingredients</button>
+									<button class="btn delete ml-1" @click="deleteInputIng(index)">X</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Recipes -->
+					<div class="form-group col-lg-12">
+						<i class="fas fa-list-ul"></i>
+						<label for="reciepes">Food Recipes</label>
+						<div class="mb-2 d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap" v-for="(r, index) in recipes_list">
+							<div class="mr-3 my-1 my-sm-1" index="index">
+								<input class="form-control" type="text" placeholder="Recipes" v-model="r.list"/>
+							</div>
+							<div class="mt-1">
+								<button class="btn" @click="addInputRec()">Add more recipes</button>
+								<button class="btn delete ml-1" @click="deleteInputRec(index)">X</button>
+							</div>
+						</div>
+						<button class="btn save mt-3" @click="saveButton()">Save Data</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- External JS -->
+		<script src="js/firestore_cuisine.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	</body>
 </html>
