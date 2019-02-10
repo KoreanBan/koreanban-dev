@@ -10,7 +10,7 @@ var config = {
 firebase.initializeApp(config);
 var firestore = firebase.firestore();
 
-const docRef = firestore.collection('koreanbap-cuisines').doc();
+const docRef = firestore.collection('koreanbap-cuisines');
 
 var update = new Vue({
 	el:"#cuisines_update",
@@ -21,7 +21,7 @@ var update = new Vue({
 			food_desc:"",
 			food_origin:"",
 			food_url:"",
-			ingredient_list: [
+			food_ingredients: [
 				{
 					quantity:"",
 					list:""
@@ -36,15 +36,15 @@ var update = new Vue({
 	},
 	methods:{
 		updateData: function(){
-			var image = d_u.food_image;
-			var name = d_u.food_name;
-			var description = d_u.food_desc;
-			var origin = d_u.food_origin;
-			var origin_url = d_u.food_url;
-			var ingredients = d_u.ingredient_list;
-			var recipes = d_u.food_recipes;
+			var image = this.d_u.food_image;
+			var name = this.d_u.food_name;
+			var description = this.d_u.food_desc;
+			var origin = this.d_u.food_origin;
+			var origin_url = this.d_u.food_url;
+			var ingredients = this.d_u.food_ingredients;
+			var recipes = this.d_u.food_recipes;
 			console.log("Saving to Firestore DB!");
-			firestore.collection("koreanbap-cuisines").document("tMD4weiXMH0zLOUB0raX").update({
+			firestore.collection("koreanbap-cuisines").doc("tMD4weiXMH0zLOUB0raX").update({
 				food_image: image,
 				food_name: name,
 				food_desc: description,
@@ -53,7 +53,7 @@ var update = new Vue({
 				food_ingredients: ingredients,
 				food_recipes: recipes
 			}).then(function(docRef){
-				console.log("Status updated!", docRef.id);
+				console.log("Data updated!");
 			}).catch(function(error){
 				console.log(error);
 			})

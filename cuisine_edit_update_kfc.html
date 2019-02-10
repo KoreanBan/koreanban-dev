@@ -21,15 +21,17 @@
 	<body>
 		<div class="wrapper container" id="cuisines_update">
 			<div class="row">
-				<button>
-					<a href="cuisine_database.html">ADD</a>
-				</button>	
-				<button>
-					<a href="cuisine_edit.html">EDIT</a>
-				</button>
-				<button>
-					<a href="cuisine_suggest.html" style="color: white">SUGGESTION</a>
-				</button>
+				<div>
+					<button class="btn">
+						<a href="cuisine_database.html" style="color: white">ADD</a>
+					</button>
+					<button class="btn">
+						<a href="cuisine_edit.html" style="color: white">EDIT</a>
+					</button>
+					<button class="btn">
+						<a href="cuisine_suggest.html" style="color: white">SUGGESTION</a>
+					</button>
+				</div>
 				<div class="col-lg-12 col-md-12 col-sm-12">
 					<h3 class="p-3 my-3">Restricted Area
 						<span class=" d-block">Cuisines Database | Update Database</span>
@@ -78,9 +80,70 @@
 							<div class="mb-2">
 								<div class="d-flex flex-row flex-wrap" index="index">
 									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
-										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients"/>
-										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[0].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[0].quantity"/>
 									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[1].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[1].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[2].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[2].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[3].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[3].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[4].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[4].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[5].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[5].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[6].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[6].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[7].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[7].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[8].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[8].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[9].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[9].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[10].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[10].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[11].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[11].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[12].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[12].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[13].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[13].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[14].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[14].quantity"/>
+									</div>
+									<div class="d-flex flex-row flex-wrap flex-xl-nowrap flex-md-nowrap flex-sm-wrap">
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Ingredients" v-model="d_u.food_ingredients[15].list"/>
+										<input class="form-control mr-md-3 my-1 my-sm-1" type="text" placeholder="Quantity" v-model="d_u.food_ingredients[15].quantity"/>
+									</div>
+
 								</div>
 							</div>
 						</div>
@@ -96,6 +159,8 @@
 									<input class="form-control my-2" type="text" placeholder="Recipes" v-model="d_u.food_recipes[2].list"/>
 									<input class="form-control my-2" type="text" placeholder="Recipes" v-model="d_u.food_recipes[3].list"/>
 									<input class="form-control my-2" type="text" placeholder="Recipes" v-model="d_u.food_recipes[4].list"/>
+									<input class="form-control my-2" type="text" placeholder="Recipes" v-model="d_u.food_recipes[5].list"/>
+									<input class="form-control my-2" type="text" placeholder="Recipes" v-model="d_u.food_recipes[6].list"/>
 								</div>
 							</div>
 							<button class="btn save mt-3" @click="updateData()">Update Data</button>

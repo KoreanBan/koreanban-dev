@@ -59,10 +59,10 @@
 								</a>
 							</li>
 							<li class="nav-item px-3 d-md-flex justify-content-center">
-								<a href="contact.html" class="nav-link text-sm-center text-lg-center text-md-center">
+								<a href="admin.html" class="nav-link text-sm-center text-lg-center text-md-center">
 									<span>
 										<img src="assets/icons/icon - Contact.png" class="m-3 d-md-block d-lg-block">
-									</span>Contact
+									</span>Admin Login
 								</a>
 							</li>
 						</ul>
@@ -129,30 +129,59 @@
 						</div>
 					</div>
 				</div>
-
 			</header>
+		</div>
+		<!-- User Suggestions Section -->
+		<div id="cuisines_suggestion">
+			<h3>Recent User Suggestions</h3>
+			<div>
+				<table>
+					<tr>
+						<th>User Name</th>
+						<th>User Email</th>
+						<th>User Suggestion</th>
+					</tr>
+					<tr>
+						<td>{{s.suggest_name}}</td>
+						<td>{{s.suggest_email}}</td>
+						<td>{{s.suggest_content}}</td>
+					</tr>
+					<tr>
+						<td>{{s.suggest_name}}</td>
+						<td>{{s.suggest_email}}</td>
+						<td>{{s.suggest_content}}</td>
+					</tr>
+					<tr>
+						<td>{{s.suggest_name}}</td>
+						<td>{{s.suggest_email}}</td>
+						<td>{{s.suggest_content}}</td>
+					</tr>
+				</table>
+			</div>
 
-			<!-- Footer -->
-			<footer id="main-footer">
-				<div class="container">
-					<div class="row">
-						<div class="col text-center">
-							<div class="mt-5">
-								<p>Copyright &copy; 2019 Korean BOP</p>
-								<p id="contact">
-									If you have any questions feel free to contact us
-								</p>
-								<i class='fas fa-envelope fa-lg'></i>&nbsp;
-								<span>KoreanBop@gmail.com |</span>
-								<i class="fa fa-phone fa-lg"></i>&nbsp;
-								<span>778-836-2243</span>
-							</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<div class="mt-5">
+							<p>Copyright &copy; 2019 Korean BOP</p>
+							<p id="contact">
+								If you have any questions feel free to contact us
+							</p>
+							<i class='fas fa-envelope fa-lg'></i>&nbsp;
+							<span>KoreanBop@gmail.com |</span>
+							<i class="fa fa-phone fa-lg"></i>&nbsp;
+							<span>778-836-2243</span>
 						</div>
 					</div>
 				</div>
-			</footer>
+			</div>
+		</footer>
 
-		</div>
+
 
 		<!-- Essential Scripts -->
 		<script src="js/firestore_suggest.js"></script>
