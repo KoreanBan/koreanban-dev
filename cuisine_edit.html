@@ -1,200 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Korean Bap | Cuisines Database | Edit/Delete</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/database.css" rel="stylesheet" type="text/css">
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <!-- Font Awesome -->
-  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'
-        integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- Vue -->
-  <script src="node_modules/vue/dist/vue.js"></script>
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
-</head>
-<body>
-<div class="wrapper container" id="cuisines_edit">
-  <div class="row">
-    <div>
-      <button>
-        <a href="cuisine_database.html" style="color: white">ADD</a>
-      </button>
-      <button>
-        <a href="cuisine_edit.html" style="color: white">EDIT</a>
-      </button>
-			<button>
-        <a href="cuisine_suggest.html" style="color: white">SUGGESTION</a>
-      </button>
-    </div>
-    <div class="col-lg-12 col-md-12 col-sm-12">
-      <h3 class="p-3 my-3">Restricted Area
-        <span class=" d-block">Cuisines Database | Edit Database</span>
-      </h3>
+	<head>
+		<title>Korean Bap | Cuisines Database | Edit/Delete</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/database.css" rel="stylesheet" type="text/css">
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<!-- Font Awesome -->
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Vue -->
+		<script src="node_modules/vue/dist/vue.js"></script>
+		<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
+	</head>
+	<body>
+		<div class="wrapper container" id="cuisines_edit">
+			<div class="row">
+				<div class="mx-auto my-3">
+					<button class="btn">
+						<a href="cuisine_database.html" style="color: white">ADD</a>
+					</button>
+					<button class="btn">
+						<a href="cuisine_edit.html" style="color: white">EDIT</a>
+					</button>
+					<button class="btn">
+						<a href="cuisine_suggest.html" style="color: white">SUGGESTION</a>
+					</button>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h3 class="p-3 my-3">Restricted Area
+						<span class=" d-block">Cuisines Database | Edit Database</span>
+					</h3>
+					<!-- Database List -->
+					<div class="row">
+						<table>
+							<thead>
+								<tr class="p-3">
+									<th scope="col">Name</th>
+									<th scope="col">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<!-- KFC -->
+									<th scope="row">{{d.food_name}}</th>
+									<td>
+										<button @click="editKFC()">Edit</button>
+										<button @click="deleteData()">Delete</button>
+									</td>
+								</tr>
+							</tbody>
 
-      <!-- Database List -->
-            <!-- KFC -->
-      <div class="row">
-        <table>
-          <thead>
-          <tr>
-            <th class="p-3" colspan="1" scope="col">Name</th>
-            <th class="p-3" scope="col">Description</th>
-            <th class="p-3" scope="col">Origin</th>
-            <th class="p-3" scope="col">Ingredients</th>
-            <th class="p-3" scope="col">Recipes</th>
-            <th class="p-3" scope="col">Actions</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <th scope="row"> {{d.food_name}}</th>
-              <td>{{d.food_desc}}</td>
-              <td>{{d.food_origin}}</td>
-              <td>
-                {{d.food_ingredients[0].list}} - {{d.food_ingredients[0].quantity}}
-                {{d.food_ingredients[1].list}} - {{d.food_ingredients[1].quantity}}
-                {{d.food_ingredients[2].list}} - {{d.food_ingredients[2].quantity}}
-                {{d.food_ingredients[3].list}} - {{d.food_ingredients[3].quantity}}
-                {{d.food_ingredients[4].list}} - {{d.food_ingredients[4].quantity}}
-                {{d.food_ingredients[5].list}} - {{d.food_ingredients[5].quantity}}
-                {{d.food_ingredients[6].list}} - {{d.food_ingredients[6].quantity}}
-                {{d.food_ingredients[7].list}} - {{d.food_ingredients[7].quantity}}
-                {{d.food_ingredients[8].list}} - {{d.food_ingredients[8].quantity}}
-                {{d.food_ingredients[9].list}} - {{d.food_ingredients[9].quantity}}
-                {{d.food_ingredients[10].list}} - {{d.food_ingredients[10].quantity}}
-                {{d.food_ingredients[11].list}} - {{d.food_ingredients[11].quantity}}
-                {{d.food_ingredients[12].list}} - {{d.food_ingredients[12].quantity}}
-                {{d.food_ingredients[13].list}} - {{d.food_ingredients[13].quantity}}
-                {{d.food_ingredients[14].list}} - {{d.food_ingredients[14].quantity}}
-                {{d.food_ingredients[15].list}} - {{d.food_ingredients[15].quantity}}
-              </td>
-              <td>
-                1. {{d.food_recipes[0].list}}
-                <!--2. {{d.food_recipes[1].list}}<br/>-->
-                <!--3. {{d.food_recipes[2].list}}<br/>-->
-                <!--4. {{d.food_recipes[3].list}}<br/>-->
-                <!--5. {{d.food_recipes[4].list}}<br/>-->
-                <!--6. {{d.food_recipes[5].list}}<br/>-->
-                <!--7. {{d.food_recipes[6].list}}-->
-              </td>
-            <td>
-              <button>Edit</button>
-              <button>Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <th class="p-3" colspan="1" scope="col">Name</th>
-            <th class="p-3" scope="col">Description</th>
-            <th class="p-3" scope="col">Origin</th>
-            <th class="p-3" scope="col">Ingredients</th>
-            <th class="p-3" scope="col">Recipes</th>
-            <th class="p-3" scope="col">Actions</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <th scope="row"> {{d.food_name}}</th>
-            <td>{{d.food_desc}}</td>
-            <td>{{d.food_origin}}</td>
-            <td>
-              {{d.food_ingredients[0].list}} - {{d.food_ingredients[0].quantity}}
-              {{d.food_ingredients[1].list}} - {{d.food_ingredients[1].quantity}}
-              {{d.food_ingredients[2].list}} - {{d.food_ingredients[2].quantity}}
-              {{d.food_ingredients[3].list}} - {{d.food_ingredients[3].quantity}}
-              {{d.food_ingredients[4].list}} - {{d.food_ingredients[4].quantity}}
-              {{d.food_ingredients[5].list}} - {{d.food_ingredients[5].quantity}}
-              {{d.food_ingredients[6].list}} - {{d.food_ingredients[6].quantity}}
-              {{d.food_ingredients[7].list}} - {{d.food_ingredients[7].quantity}}
-              {{d.food_ingredients[8].list}} - {{d.food_ingredients[8].quantity}}
-              {{d.food_ingredients[9].list}} - {{d.food_ingredients[9].quantity}}
-              {{d.food_ingredients[10].list}} - {{d.food_ingredients[10].quantity}}
-              {{d.food_ingredients[11].list}} - {{d.food_ingredients[11].quantity}}
-              {{d.food_ingredients[12].list}} - {{d.food_ingredients[12].quantity}}
-              {{d.food_ingredients[13].list}} - {{d.food_ingredients[13].quantity}}
-              {{d.food_ingredients[14].list}} - {{d.food_ingredients[14].quantity}}
-              {{d.food_ingredients[15].list}} - {{d.food_ingredients[15].quantity}}
-            </td>
-            <td>
-              1. {{d.food_recipes[0].list}}
-              <!--2. {{d.food_recipes[1].list}}<br/>-->
-              <!--3. {{d.food_recipes[2].list}}<br/>-->
-              <!--4. {{d.food_recipes[3].list}}<br/>-->
-              <!--5. {{d.food_recipes[4].list}}<br/>-->
-              <!--6. {{d.food_recipes[5].list}}<br/>-->
-              <!--7. {{d.food_recipes[6].list}}-->
-            </td>
-            <td>
-              <button>Edit</button>
-              <button>Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <th class="p-3" colspan="1" scope="col">Name</th>
-            <th class="p-3" scope="col">Description</th>
-            <th class="p-3" scope="col">Origin</th>
-            <th class="p-3" scope="col">Ingredients</th>
-            <th class="p-3" scope="col">Recipes</th>
-            <th class="p-3" scope="col">Actions</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <th scope="row"> {{d.food_name}}</th>
-            <td>{{d.food_desc}}</td>
-            <td>{{d.food_origin}}</td>
-            <td>
-              {{d.food_ingredients[0].list}} - {{d.food_ingredients[0].quantity}}
-              {{d.food_ingredients[1].list}} - {{d.food_ingredients[1].quantity}}
-              {{d.food_ingredients[2].list}} - {{d.food_ingredients[2].quantity}}
-              {{d.food_ingredients[3].list}} - {{d.food_ingredients[3].quantity}}
-              {{d.food_ingredients[4].list}} - {{d.food_ingredients[4].quantity}}
-              {{d.food_ingredients[5].list}} - {{d.food_ingredients[5].quantity}}
-              {{d.food_ingredients[6].list}} - {{d.food_ingredients[6].quantity}}
-              {{d.food_ingredients[7].list}} - {{d.food_ingredients[7].quantity}}
-              {{d.food_ingredients[8].list}} - {{d.food_ingredients[8].quantity}}
-              {{d.food_ingredients[9].list}} - {{d.food_ingredients[9].quantity}}
-              {{d.food_ingredients[10].list}} - {{d.food_ingredients[10].quantity}}
-              {{d.food_ingredients[11].list}} - {{d.food_ingredients[11].quantity}}
-              {{d.food_ingredients[12].list}} - {{d.food_ingredients[12].quantity}}
-              {{d.food_ingredients[13].list}} - {{d.food_ingredients[13].quantity}}
-              {{d.food_ingredients[14].list}} - {{d.food_ingredients[14].quantity}}
-              {{d.food_ingredients[15].list}} - {{d.food_ingredients[15].quantity}}
-            </td>
-            <td>
-              1. {{d.food_recipes[0].list}}
-              <!--2. {{d.food_recipes[1].list}}<br/>-->
-              <!--3. {{d.food_recipes[2].list}}<br/>-->
-              <!--4. {{d.food_recipes[3].list}}<br/>-->
-              <!--5. {{d.food_recipes[4].list}}<br/>-->
-              <!--6. {{d.food_recipes[5].list}}<br/>-->
-              <!--7. {{d.food_recipes[6].list}}-->
-            </td>
-            <td>
-              <button>Edit</button>
-              <button>Delete</button>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-<!-- External JS -->
-<script src="js/firestore_edit.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-</body>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- External JS -->
+		<script src="js/firestore_edit.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+						integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+						crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+						integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+						crossorigin="anonymous"></script>
+	</body>
 </html>

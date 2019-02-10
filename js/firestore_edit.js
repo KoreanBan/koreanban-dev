@@ -33,7 +33,16 @@ var cuisines_edit = new Vue({
     }
 	},
 	methods:{
-		
+		editKFC: function(){
+			window.location.href = 'cuisine_edit_update_kfc.html';
+		},
+		deleteData: function(){
+			firestore.collection('koreanbap-cuisines').doc('9Wdf9zckkgziWUvlmBMK').delete().then(function(){
+				console.log("Dummy file successfully deleted");
+			}).catch(function(error){
+				console.log("Error deleting file:", error);
+			});
+		}
 	},
 	mounted:function(){
 		firestore.collection('koreanbap-cuisines').doc("tMD4weiXMH0zLOUB0raX").get().then((doc)=>{
