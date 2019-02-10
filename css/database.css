@@ -62,6 +62,23 @@ button.save:hover {
     color: var(--main-color);
 }
 
-tr {
+/* Table */
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    font-family:var(--font-main);
+    font-weight: 600;
+}
+
+td {
+    font-family:var(--secondary-color);
+}
+
+th, td {
     border:1px solid var(--grey-color);
+    border-collapse: collapse;
 }

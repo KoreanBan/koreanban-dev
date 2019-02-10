@@ -40,81 +40,44 @@
       </h3>
 
       <!-- Database List -->
+            <!-- KFC -->
       <div class="row">
         <table>
           <thead>
-          <tr class="p-3">
-            <th colspan="1" scope="col">Name</th>
-            <th  scope="col">Description</th>
-            <th scope="col">Origin</th>
-            <th scope="col">Ingredients</th>
-            <th scope="col">Recipes</th>
-            <th scope="col">Actions</th>
+          <tr>
+            <th class="p-3" colspan="1" scope="col">Name</th>
+            <th class="p-3" scope="col">Description</th>
+            <th class="p-3" scope="col">Origin</th>
+            <th class="p-3" scope="col">Ingredients</th>
+            <th class="p-3" scope="col">Recipes</th>
+            <th class="p-3" scope="col">Actions</th>
           </tr>
           </thead>
           <tbody>
-            <tr>
-            <!-- KFC -->
-              <th scope="row">{{d.food_name}}</th>
-                <td>{{d.food_desc}}</td>
-                <td>{{d.food_origin}}</td>
-                <td>
-                  {{d.food_ingredients[0].list}} - {{d.food_ingredients[0].quantity}}<br/>
-                     <!--{{d.food_ingredients[1].list}} - {{d.food_ingredients[1].quantity}}<br/>
-                     {{d.food_ingredients[2].list}} - {{d.food_ingredients[2].quantity}}<br/>
-                     {{d.food_ingredients[3].list}} - {{d.food_ingredients[3].quantity}}<br/>
-                     {{d.food_ingredients[4].list}} - {{d.food_ingredients[4].quantity}}<br/>
-                    {{d.food_ingredients[5].list}} - {{d.food_ingredients[5].quantity}}<br/>
-                    {{d.food_ingredients[6].list}} - {{d.food_ingredients[6].quantity}}<br/>
-                    {{d.food_ingredients[7].list}} - {{d.food_ingredients[7].quantity}}<br/>
-                    {{d.food_ingredients[8].list}} - {{d.food_ingredients[8].quantity}}<br/>
-                    {{d.food_ingredients[9].list}} - {{d.food_ingredients[9].quantity}}<br/>
-                    {{d.food_ingredients[10].list}} - {{d.food_ingredients[10].quantity}}<br/>
-                    {{d.food_ingredients[11].list}} - {{d.food_ingredients[11].quantity}}<br/>
-                    {{d.food_ingredients[12].list}} - {{d.food_ingredients[12].quantity}}<br/>
-                    {{d.food_ingredients[13].list}} - {{d.food_ingredients[13].quantity}}<br/>
-                    {{d.food_ingredients[14].list}} - {{d.food_ingredients[14].quantity}}<br/>
-                    {{d.food_ingredients[15].list}} - {{d.food_ingredients[15].quantity}}<br/>-->
-                </td>
-                <td>
-                1. {{d.food_recipes[0].list}}<br/>
-                <!--2. {{d.food_recipes[1].list}}<br/>-->
-                <!--3. {{d.food_recipes[2].list}}<br/>-->
-                <!--4. {{d.food_recipes[3].list}}<br/>-->
-                <!--5. {{d.food_recipes[4].list}}<br/>-->
-                <!--6. {{d.food_recipes[5].list}}<br/>-->
-                <!--7. {{d.food_recipes[6].list}}-->
-                </td>
-                <td>
-                  <button>Edit</button>
-                  <button>Delete</button>
-                </td>
-             </tr>
-            <tr>
-              <!-- KFC -->
-              <th scope="row">{{d.food_name}}</th>
+          <tr>
+            <th scope="row"> {{d.food_name}}</th>
               <td>{{d.food_desc}}</td>
               <td>{{d.food_origin}}</td>
               <td>
-                {{d.food_ingredients[0].list}} - {{d.food_ingredients[0].quantity}}<br/>
-                <!--{{d.food_ingredients[1].list}} - {{d.food_ingredients[1].quantity}}<br/>
-                {{d.food_ingredients[2].list}} - {{d.food_ingredients[2].quantity}}<br/>
-                {{d.food_ingredients[3].list}} - {{d.food_ingredients[3].quantity}}<br/>
-                {{d.food_ingredients[4].list}} - {{d.food_ingredients[4].quantity}}<br/>
-               {{d.food_ingredients[5].list}} - {{d.food_ingredients[5].quantity}}<br/>
-               {{d.food_ingredients[6].list}} - {{d.food_ingredients[6].quantity}}<br/>
-               {{d.food_ingredients[7].list}} - {{d.food_ingredients[7].quantity}}<br/>
-               {{d.food_ingredients[8].list}} - {{d.food_ingredients[8].quantity}}<br/>
-               {{d.food_ingredients[9].list}} - {{d.food_ingredients[9].quantity}}<br/>
-               {{d.food_ingredients[10].list}} - {{d.food_ingredients[10].quantity}}<br/>
-               {{d.food_ingredients[11].list}} - {{d.food_ingredients[11].quantity}}<br/>
-               {{d.food_ingredients[12].list}} - {{d.food_ingredients[12].quantity}}<br/>
-               {{d.food_ingredients[13].list}} - {{d.food_ingredients[13].quantity}}<br/>
-               {{d.food_ingredients[14].list}} - {{d.food_ingredients[14].quantity}}<br/>
-               {{d.food_ingredients[15].list}} - {{d.food_ingredients[15].quantity}}<br/>-->
+                {{d.food_ingredients[0].list}} - {{d.food_ingredients[0].quantity}}
+                {{d.food_ingredients[1].list}} - {{d.food_ingredients[1].quantity}}
+                {{d.food_ingredients[2].list}} - {{d.food_ingredients[2].quantity}}
+                {{d.food_ingredients[3].list}} - {{d.food_ingredients[3].quantity}}
+                {{d.food_ingredients[4].list}} - {{d.food_ingredients[4].quantity}}
+                {{d.food_ingredients[5].list}} - {{d.food_ingredients[5].quantity}}
+                {{d.food_ingredients[6].list}} - {{d.food_ingredients[6].quantity}}
+                {{d.food_ingredients[7].list}} - {{d.food_ingredients[7].quantity}}
+                {{d.food_ingredients[8].list}} - {{d.food_ingredients[8].quantity}}
+                {{d.food_ingredients[9].list}} - {{d.food_ingredients[9].quantity}}
+                {{d.food_ingredients[10].list}} - {{d.food_ingredients[10].quantity}}
+                {{d.food_ingredients[11].list}} - {{d.food_ingredients[11].quantity}}
+                {{d.food_ingredients[12].list}} - {{d.food_ingredients[12].quantity}}
+                {{d.food_ingredients[13].list}} - {{d.food_ingredients[13].quantity}}
+                {{d.food_ingredients[14].list}} - {{d.food_ingredients[14].quantity}}
+                {{d.food_ingredients[15].list}} - {{d.food_ingredients[15].quantity}}
               </td>
               <td>
-                1. {{d.food_recipes[0].list}}<br/>
+                1. {{d.food_recipes[0].list}}
                 <!--2. {{d.food_recipes[1].list}}<br/>-->
                 <!--3. {{d.food_recipes[2].list}}<br/>-->
                 <!--4. {{d.food_recipes[3].list}}<br/>-->
@@ -122,57 +85,108 @@
                 <!--6. {{d.food_recipes[5].list}}<br/>-->
                 <!--7. {{d.food_recipes[6].list}}-->
               </td>
-              <td>
-                <button>Edit</button>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <!-- KFC -->
-              <th scope="row">{{d.food_name}}</th>
-              <td>{{d.food_desc}}</td>
-              <td>{{d.food_origin}}</td>
-              <td>
-                {{d.food_ingredients[0].list}} - {{d.food_ingredients[0].quantity}}<br/>
-                <!--{{d.food_ingredients[1].list}} - {{d.food_ingredients[1].quantity}}<br/>
-                {{d.food_ingredients[2].list}} - {{d.food_ingredients[2].quantity}}<br/>
-                {{d.food_ingredients[3].list}} - {{d.food_ingredients[3].quantity}}<br/>
-                {{d.food_ingredients[4].list}} - {{d.food_ingredients[4].quantity}}<br/>
-               {{d.food_ingredients[5].list}} - {{d.food_ingredients[5].quantity}}<br/>
-               {{d.food_ingredients[6].list}} - {{d.food_ingredients[6].quantity}}<br/>
-               {{d.food_ingredients[7].list}} - {{d.food_ingredients[7].quantity}}<br/>
-               {{d.food_ingredients[8].list}} - {{d.food_ingredients[8].quantity}}<br/>
-               {{d.food_ingredients[9].list}} - {{d.food_ingredients[9].quantity}}<br/>
-               {{d.food_ingredients[10].list}} - {{d.food_ingredients[10].quantity}}<br/>
-               {{d.food_ingredients[11].list}} - {{d.food_ingredients[11].quantity}}<br/>
-               {{d.food_ingredients[12].list}} - {{d.food_ingredients[12].quantity}}<br/>
-               {{d.food_ingredients[13].list}} - {{d.food_ingredients[13].quantity}}<br/>
-               {{d.food_ingredients[14].list}} - {{d.food_ingredients[14].quantity}}<br/>
-               {{d.food_ingredients[15].list}} - {{d.food_ingredients[15].quantity}}<br/>-->
-              </td>
-              <td>
-                1. {{d.food_recipes[0].list}}<br/>
-                <!--2. {{d.food_recipes[1].list}}<br/>-->
-                <!--3. {{d.food_recipes[2].list}}<br/>-->
-                <!--4. {{d.food_recipes[3].list}}<br/>-->
-                <!--5. {{d.food_recipes[4].list}}<br/>-->
-                <!--6. {{d.food_recipes[5].list}}<br/>-->
-                <!--7. {{d.food_recipes[6].list}}-->
-              </td>
-              <td>
-                <button>Edit</button>
-                <button>Delete</button>
-              </td>
-            </tr>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <th class="p-3" colspan="1" scope="col">Name</th>
+            <th class="p-3" scope="col">Description</th>
+            <th class="p-3" scope="col">Origin</th>
+            <th class="p-3" scope="col">Ingredients</th>
+            <th class="p-3" scope="col">Recipes</th>
+            <th class="p-3" scope="col">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row"> {{d.food_name}}</th>
+            <td>{{d.food_desc}}</td>
+            <td>{{d.food_origin}}</td>
+            <td>
+              {{d.food_ingredients[0].list}} - {{d.food_ingredients[0].quantity}}
+              {{d.food_ingredients[1].list}} - {{d.food_ingredients[1].quantity}}
+              {{d.food_ingredients[2].list}} - {{d.food_ingredients[2].quantity}}
+              {{d.food_ingredients[3].list}} - {{d.food_ingredients[3].quantity}}
+              {{d.food_ingredients[4].list}} - {{d.food_ingredients[4].quantity}}
+              {{d.food_ingredients[5].list}} - {{d.food_ingredients[5].quantity}}
+              {{d.food_ingredients[6].list}} - {{d.food_ingredients[6].quantity}}
+              {{d.food_ingredients[7].list}} - {{d.food_ingredients[7].quantity}}
+              {{d.food_ingredients[8].list}} - {{d.food_ingredients[8].quantity}}
+              {{d.food_ingredients[9].list}} - {{d.food_ingredients[9].quantity}}
+              {{d.food_ingredients[10].list}} - {{d.food_ingredients[10].quantity}}
+              {{d.food_ingredients[11].list}} - {{d.food_ingredients[11].quantity}}
+              {{d.food_ingredients[12].list}} - {{d.food_ingredients[12].quantity}}
+              {{d.food_ingredients[13].list}} - {{d.food_ingredients[13].quantity}}
+              {{d.food_ingredients[14].list}} - {{d.food_ingredients[14].quantity}}
+              {{d.food_ingredients[15].list}} - {{d.food_ingredients[15].quantity}}
+            </td>
+            <td>
+              1. {{d.food_recipes[0].list}}
+              <!--2. {{d.food_recipes[1].list}}<br/>-->
+              <!--3. {{d.food_recipes[2].list}}<br/>-->
+              <!--4. {{d.food_recipes[3].list}}<br/>-->
+              <!--5. {{d.food_recipes[4].list}}<br/>-->
+              <!--6. {{d.food_recipes[5].list}}<br/>-->
+              <!--7. {{d.food_recipes[6].list}}-->
+            </td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <th class="p-3" colspan="1" scope="col">Name</th>
+            <th class="p-3" scope="col">Description</th>
+            <th class="p-3" scope="col">Origin</th>
+            <th class="p-3" scope="col">Ingredients</th>
+            <th class="p-3" scope="col">Recipes</th>
+            <th class="p-3" scope="col">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row"> {{d.food_name}}</th>
+            <td>{{d.food_desc}}</td>
+            <td>{{d.food_origin}}</td>
+            <td>
+              {{d.food_ingredients[0].list}} - {{d.food_ingredients[0].quantity}}
+              {{d.food_ingredients[1].list}} - {{d.food_ingredients[1].quantity}}
+              {{d.food_ingredients[2].list}} - {{d.food_ingredients[2].quantity}}
+              {{d.food_ingredients[3].list}} - {{d.food_ingredients[3].quantity}}
+              {{d.food_ingredients[4].list}} - {{d.food_ingredients[4].quantity}}
+              {{d.food_ingredients[5].list}} - {{d.food_ingredients[5].quantity}}
+              {{d.food_ingredients[6].list}} - {{d.food_ingredients[6].quantity}}
+              {{d.food_ingredients[7].list}} - {{d.food_ingredients[7].quantity}}
+              {{d.food_ingredients[8].list}} - {{d.food_ingredients[8].quantity}}
+              {{d.food_ingredients[9].list}} - {{d.food_ingredients[9].quantity}}
+              {{d.food_ingredients[10].list}} - {{d.food_ingredients[10].quantity}}
+              {{d.food_ingredients[11].list}} - {{d.food_ingredients[11].quantity}}
+              {{d.food_ingredients[12].list}} - {{d.food_ingredients[12].quantity}}
+              {{d.food_ingredients[13].list}} - {{d.food_ingredients[13].quantity}}
+              {{d.food_ingredients[14].list}} - {{d.food_ingredients[14].quantity}}
+              {{d.food_ingredients[15].list}} - {{d.food_ingredients[15].quantity}}
+            </td>
+            <td>
+              1. {{d.food_recipes[0].list}}
+              <!--2. {{d.food_recipes[1].list}}<br/>-->
+              <!--3. {{d.food_recipes[2].list}}<br/>-->
+              <!--4. {{d.food_recipes[3].list}}<br/>-->
+              <!--5. {{d.food_recipes[4].list}}<br/>-->
+              <!--6. {{d.food_recipes[5].list}}<br/>-->
+              <!--7. {{d.food_recipes[6].list}}-->
+            </td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
           </tbody>
-
         </table>
       </div>
-
     </div>
   </div>
-</div>
-
 <!-- External JS -->
 <script src="js/firestore_edit.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
