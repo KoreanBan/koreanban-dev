@@ -4,4 +4,3 @@ var search = new Vue({
     search:""
   }
 });
-
