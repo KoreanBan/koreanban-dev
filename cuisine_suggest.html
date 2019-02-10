@@ -22,15 +22,15 @@
 		<div class="wrapper container" id="cuisines_suggestion">
 			<div class="row">
 				<div class="mx-auto my-3">
-					<button class="btn">
-						<a href="cuisine_database.html" style="color: white">ADD</a>
-					</button>	
-					<button class="btn">
-						<a href="cuisine_edit.html" style="color: white">EDIT</a>
-					</button>
-					<button class="btn">
-						<a href="cuisine_suggest.html" style="color: white">SUGGESTION</a>
-					</button>
+					<a href="cuisine_database.html" style="color: white">
+						<button class="btn add">ADD</button>
+					</a>					
+					<a href="cuisine_edit.html" style="color: white">
+						<button class="btn edit">EDIT</button>
+					</a>			
+					<a href="cuisine_suggest.html" style="color: white">
+						<button class="btn suggest">SUGGESTION</button>
+					</a>
 				</div>
 				<div class="col-lg-12 col-md-12 col-sm-12">
 					<h3 class="p-3 my-3">Restricted Area
@@ -38,19 +38,20 @@
 					</h3>
 
 					<!-- Suggestion List -->
-					<div class="row">
-						<table>
+					<div class="row mx-3">
+						<table class="table table-bordered">
 							<tr>
-								<th>User Name</th>
-								<th>User Email</th>
-								<th>User Suggestion</th>
+								<th scope="col">User Name</th>
+								<th scope="col">User Email</th>
+								<th scope="col">User Suggestion</th>
+								<th scope="col">Actions</th>
 							</tr>
 							<tr>
 								<td>{{s.suggest_name}}</td>
 								<td>{{s.suggest_email}}</td>
 								<td>{{s.suggest_content}}</td>
 								<td>
-									<button>Delete</button>
+									<button class="btn">Delete</button>
 								</td>
 							</tr>
 							<tr>
@@ -58,7 +59,7 @@
 								<td>{{s.suggest_email}}</td>
 								<td>{{s.suggest_content}}</td>
 								<td>
-									<button>Delete</button>
+									<button class="btn">Delete</button>
 								</td>
 							</tr>
 							<tr>
@@ -66,7 +67,7 @@
 								<td>{{s.suggest_email}}</td>
 								<td>{{s.suggest_content}}</td>
 								<td>
-									<button>Delete</button>
+									<button class="btn">Delete</button>
 								</td>
 							</tr>
 						</table>
