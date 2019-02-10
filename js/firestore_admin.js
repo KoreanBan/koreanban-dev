@@ -16,6 +16,7 @@
 	const inpPass = document.getElementById("password");
 	const btnLogin = document.getElementById("login");
 	const btnLogout = document.getElementById("logout");
+	const btnCancel = document.getElementById("cancel");
 	const adminForm = document.getElementById("form");
 	
 	// Add Login Event
@@ -32,7 +33,7 @@
 	// Add a Realtime Listener
 	firebase.auth().onAuthStateChanged(function(firebaseUser) {
 		if(firebaseUser){
-			console.log(firebaseUser);
+//			console.log(firebaseUser);
 			btnLogout.classList.remove('hide');
 			btnLogin.classList.add('hide');
 			adminForm.innerHTML = '<h2 id="currUser"></h2><object type="text/html" data="cuisine_database.html" id="formStyle"></object>';
@@ -41,7 +42,7 @@
 			
 			if(user != null){
 				var email_id = user.email;
-				document.getElementById("currUser").innerHTML = "Welcome to Admin area, " +email_id+ "!";
+				document.getElementById("currUser").innerHTML = "Welcome to Admin area!<br/>Administrator: " + email_id;
 			}
 			
 		} else {
@@ -56,6 +57,11 @@
 	btnLogout.addEventListener('click', e => {
 		firebase.auth().signOut();
 		adminForm.innerHTML = '';
+	});
+	
+	// Add Cancel Login Event
+	btnCancel.addEventListener('click', e => {
+		window.location.href = 'index.html';
 	});
 	
 }());
