@@ -22,43 +22,40 @@
 		<div class="wrapper container" id="cuisines_edit">
 			<div class="row">
 				<div class="mx-auto my-3">
-					<button class="btn">
-						<a href="cuisine_database.html" style="color: white">ADD</a>
-					</button>
-					<button class="btn">
-						<a href="cuisine_edit.html" style="color: white">EDIT</a>
-					</button>
-					<button class="btn">
-						<a href="cuisine_suggest.html" style="color: white">SUGGESTION</a>
-					</button>
+					<a href="cuisine_database.html" style="color: white">
+						<button class="btn add">ADD</button>
+					</a>					
+					<a href="cuisine_edit.html" style="color: white">
+						<button class="btn edit">EDIT</button>
+					</a>			
+					<a href="cuisine_suggest.html" style="color: white">
+						<button class="btn suggest">SUGGESTION</button>
+					</a>
 				</div>
 				<div class="col-lg-12 col-md-12 col-sm-12">
 					<h3 class="p-3 my-3">Restricted Area
 						<span class=" d-block">Cuisines Database | Edit Database</span>
 					</h3>
 					<!-- Database List -->
-					<div class="row">
-						<table>
+					<div class="row mx-3">
+						<table class="table table-bordered">
 							<thead>
-								<tr class="p-3">
+								<tr>
 									<th scope="col">Name</th>
 									<th scope="col">Actions</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<!-- KFC -->
-									<th scope="row">{{d.food_name}}</th>
+									<td scope="row">{{d.food_name}}</td>
 									<td>
-										<button @click="editKFC()">Edit</button>
-										<button @click="deleteData()">Delete</button>
+										<button class="btn" @click="editKFC()">Edit</button>
+										<button class="btn" @click="deleteData()">Delete</button>
 									</td>
 								</tr>
 							</tbody>
-
 						</table>
 					</div>
-
 				</div>
 			</div>
 		</div>
