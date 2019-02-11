@@ -117,3 +117,12 @@
 }
 
 /* Jumbotron */
+.jumbotron a {
+    background-color:var(--main-color);
+    color:var(--bright-color);
+}
+
+.jumbotron a:hover {
+    background-color:var(--secondary-color);
+    color:var(--bright-color);
+}
