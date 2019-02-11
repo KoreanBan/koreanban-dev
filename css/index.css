@@ -1,11 +1,25 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,800');
+
+/* CSS Variables */
+:root {
+    /* Colors */
+    --main-color: #0061aa;
+    --secondary-color: #ee3b33;
+    --grey-color: #5d737e;
+    --bright-color: #F9F9F9;
+    --text-color: #4a4a4a;
+    /* Overlay */
+    --dark-overlay: rgba(0, 0, 0, 0.7);
+    /* Font Family */
+    --font-main: 'Open Sans', sans-serif;
+    --font-secondary: 'Raleway', sans-serif;
+}
 
 .navbar-nav {
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
-}
-
-body {
-    background-color: antiquewhite
 }
 
 .jumbotron {
@@ -28,11 +42,6 @@ body {
 
 #contact {
     font-size: 30px;
-}
-
-#text1 {
-    font-size: 30px;
-    padding-left: 9px;
 }
 
 #icon2 {
@@ -69,5 +78,42 @@ body {
     height: 50px;
 }
 
+/* Carousel */
+.carousel {
+   max-width:1200px;
+   margin:0 auto;
+   position: relative;
+}
 
+.carousel-inner {
+    padding-top:170px;
+}
 
+.carousel-inner img {
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
+}
+
+.carousel-inner h1 {
+    color:var(--bright-color);
+    font-family:var(--font-main);
+    font-weight:600;
+    text-shadow: 3px 4px 3px rgba(0,0,0,0.3);
+}
+
+.carousel-inner p {
+    font-family: var(--font-secondary);
+}
+
+.carousel a {
+    text-decoration: none;
+    color:var(--bright-color);
+}
+
+.carousel a:hover {
+    color:var(--secondary-color);
+    opacity:0.7;
+    text-shadow: 3px 4px 3px rgba(0,0,0,0.3);
+}
+
+/* Jumbotron */

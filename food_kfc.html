@@ -22,58 +22,58 @@
 	</head>
 
 	<body>
-		<div id="cuisineFetch">
-			<div id="searchFunc">
-				<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pb-3">
-					<div class="container-fluid">
-						<a class="navbar-brand" href="index.html">
-							<img src="assets/logo/logo.svg" width="150px">
-						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-							<span class="navbar-toggler-icon"></span>
-						</button>
+		<div id="searchFunc">
+			<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pb-3">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="index.html">
+						<img src="assets/logo/logo.svg" width="150px">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-						<div class="collapse navbar-collapse" id="navbarContent">
-							<ul class="navbar-nav ml-auto">
-								<li class="nav-item pt-3 px-3 d-md-flex justify-content-center">
-									<search></search>
-								</li>
-								<li class="nav-item px-3">
-									<a href="index.html" class="nav-link text-sm-center text-lg-center text-md-center">
-										<span>
-											<img src="assets/icons/icon - home.png" class="m-3 d-lg-block d-md-block">
-										</span>Home
-									</a>
-								</li>
-								<li class="nav-item px-3">
-									<a href="cuisuine.html" class="nav-link text-sm-center text-lg-center text-md-center">
-										<span>
-											<img src="assets/icons/icon%20-%20cuisuine.png" class="m-3 d-lg-block d-md-block">
-										</span>Cuisine
-									</a>
-								</li>
-								<li class="nav-item px-3">
-									<a href="suggestion.html" class="nav-link text-sm-center text-lg-center text-md-center">
-										<span>
-											<img src="assets/icons/icon - Suggestion.png" class="m-3 d-md-block d-lg-block">
-										</span>Suggestion
-									</a>
-								</li>
-								<li class="nav-item px-1">
-									<a href="admin.html" class="nav-link text-sm-center text-lg-center text-md-center">
-										<span>
-											<img src="assets/icons/icon - Contact.png" class="m-3 d-md-block d-lg-block">
-										</span>Admin Login
-									</a>
-								</li>
-							</ul>
-						</div>
-
+					<div class="collapse navbar-collapse" id="navbarContent">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item pt-3 px-3 d-md-flex justify-content-center">
+								<search></search>
+							</li>
+							<li class="nav-item px-3">
+								<a href="index.html" class="nav-link text-sm-center text-lg-center text-md-center">
+									<span>
+										<img src="assets/icons/icon - home.png" class="m-3 d-lg-block d-md-block">
+									</span>Home
+								</a>
+							</li>
+							<li class="nav-item px-3">
+								<a href="cuisuine.html" class="nav-link text-sm-center text-lg-center text-md-center">
+									<span>
+										<img src="assets/icons/icon%20-%20cuisuine.png" class="m-3 d-lg-block d-md-block">
+									</span>Cuisine
+								</a>
+							</li>
+							<li class="nav-item px-3">
+								<a href="suggestion.html" class="nav-link text-sm-center text-lg-center text-md-center">
+									<span>
+										<img src="assets/icons/icon - Suggestion.png" class="m-3 d-md-block d-lg-block">
+									</span>Suggestion
+								</a>
+							</li>
+							<li class="nav-item px-1">
+								<a href="admin.html" class="nav-link text-sm-center text-lg-center text-md-center">
+									<span>
+										<img src="assets/icons/icon - Contact.png" class="m-3 d-md-block d-lg-block">
+									</span>Admin Login
+								</a>
+							</li>
+						</ul>
 					</div>
-				</nav>
-			</div>
 
-			<!-- HERO IMAGE -->
+				</div>
+			</nav>
+		</div>
+
+		<!-- HERO IMAGE -->
+		<div id="cuisineFetch">	
 			<header id="heroImage" :style="{background:'url('+f.food_image+')'}">
 				<div class="dark-overlay">
 					<div class="home-inner">
@@ -274,7 +274,8 @@
 			</footer>
 		</div>
 
-		<!-- Optional Scripts -->
+		<!-- Essential Scripts -->
+		<script src="js/firestore_fetch.js"></script>
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
@@ -283,8 +284,5 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
 						integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 						crossorigin="anonymous"></script>
-		<!-- Essential Scripts -->
-		<script src="js/firestore_search.js"></script>
-		<script src="js/firestore_fetch.js"></script>
 	</body>
 </html>
