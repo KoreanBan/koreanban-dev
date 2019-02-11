@@ -22,38 +22,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.jumbotron {
-    padding-top: 50px;
-    background-color: transparent;
-}
-
-#contact {
-    font-size: 30px;
-}
-
-#icon2 {
-    margin-top: 20px;
-    padding-left: 380px
-}
-
-#icon1 {
-    padding-left: 380px
-}
-
-#text2 {
-    font-size: 30px;
-    padding-left: 10px;
-}
-
-#footer {
-    padding-right: 40px
-}
-
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Raleway:500');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,800');
-
-
 .nav-item a {
     font-family: var(--font-main);
     color: var(--link-color);
@@ -104,12 +72,20 @@
 }
 
 /* Jumbotron */
+.jumbotron {
+    background-color:var(--bright-color);
+}
+
 .jumbotron h1 {
     font-family:var(--font-main);
 }
 
 .jumbotron p:nth-child(2) {
     font-family:var(--font-secondary);
+}
+
+.jumbotron p:nth-child(4), p:nth-child(5) {
+    color:var(--text-color);
 }
 
 .jumbotron a {

@@ -21,10 +21,6 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
-body {
-	background-image: url('../assets/food/pattern.jpg');
-}
-
 /* Icons */
 .nav-item img {
 	width: 70px;

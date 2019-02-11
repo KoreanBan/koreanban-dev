@@ -20,60 +20,58 @@
 		<link href="css/food.css" rel="stylesheet">
 		<title>KoreanBap | Cuisine | Spicy Korean Fried Chicken</title>
 	</head>
-
 	<body>
-		<div id="searchFunc">
-			<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pb-3">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="index.html">
-						<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/logo_images%2Flogo.svg?alt=media&token=75a8ef65-e3ee-4b57-b233-05c677853dee" width="150px">
-					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-
-					<div class="collapse navbar-collapse" id="navbarContent">
-						<ul class="navbar-nav ml-auto">
-							<li class="nav-item pt-3 px-3 d-md-flex justify-content-center">
-								<search></search>
-							</li>
-							<li class="nav-item px-3">
-								<a href="index.html" class="nav-link text-sm-center text-lg-center text-md-center">
-									<span>
-										<img src="assets/icons/icon - home.png" class="m-3 d-lg-block d-md-block">
-									</span>Home
-								</a>
-							</li>
-							<li class="nav-item px-3">
-								<a href="cuisuine.html" class="nav-link text-sm-center text-lg-center text-md-center">
-									<span>
-										<img src="assets/icons/icon%20-%20cuisuine.png" class="m-3 d-lg-block d-md-block">
-									</span>Cuisine
-								</a>
-							</li>
-							<li class="nav-item px-3">
-								<a href="suggestion.html" class="nav-link text-sm-center text-lg-center text-md-center">
-									<span>
-										<img src="assets/icons/icon - Suggestion.png" class="m-3 d-md-block d-lg-block">
-									</span>Suggestion
-								</a>
-							</li>
-							<li class="nav-item px-1">
-								<a href="admin.html" class="nav-link text-sm-center text-lg-center text-md-center">
-									<span>
-										<img src="assets/icons/icon - Contact.png" class="m-3 d-md-block d-lg-block">
-									</span>Admin Login
-								</a>
-							</li>
-						</ul>
+		<div id="cuisineFetch">
+			<div id="searchFunc">
+				<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pb-3">
+					<div class="container-fluid">
+						<a class="navbar-brand" href="index.html">
+							<img src="assets/logo/logo.svg" width="150px">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+	
+						<div class="collapse navbar-collapse" id="navbarContent">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item pt-3 px-3 d-md-flex justify-content-center">
+									<search></search>
+								</li>
+								<li class="nav-item px-3">
+									<a href="index.html" class="nav-link text-sm-center text-lg-center text-md-center">
+										<span>
+											<img src="assets/icons/icon - home.png" class="m-3 mx-md-auto d-lg-block d-md-block">
+										</span>Home
+									</a>
+								</li>
+								<li class="nav-item px-3">
+									<a href="cuisuine.html" class="nav-link text-sm-center text-lg-center text-md-center">
+										<span>
+											<img src="assets/icons/icon%20-%20cuisuine.png" class="m-3 mx-md-auto d-lg-block d-md-block">
+										</span>Cuisine
+									</a>
+								</li>
+								<li class="nav-item px-3">
+									<a href="suggestion.html" class="nav-link text-sm-center text-lg-center text-md-center">
+										<span>
+											<img src="assets/icons/icon - Suggestion.png" class="m-3 mx-md-auto d-md-block d-lg-block">
+										</span>Suggestion
+									</a>
+								</li>
+								<li class="nav-item px-1">
+									<a href="admin.html" class="nav-link text-sm-center text-lg-center text-md-center">
+										<span>
+											<img src="assets/icons/icon - Contact.png" class="m-3 mx-md-auto d-md-block d-lg-block">
+										</span>Admin Login
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
+				</nav>
+			</div>
 
-				</div>
-			</nav>
-		</div>
-
-		<!-- HERO IMAGE -->
-		<div id="cuisineFetch">	
+			<!-- HERO IMAGE -->
 			<header id="heroImage" :style="{background:'url('+f.food_image+')'}">
 				<div class="dark-overlay">
 					<div class="home-inner">
@@ -101,11 +99,9 @@
 										<p class="card-text">{{f.food_origin}}</p>
 										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7068414.293272505!2d98.4465403498163!3d30.112105053608925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36e4e73368bdcdb3%3A0xde8f7ccf8f99feb9!2sSichuan%2C+China!5e0!3m2!1sen!2sca!4v1549153200124" class="img-fluid img-thumbnail rounded mx-auto d-block" frameborder="0" style="border:0" allowfullscreen></iframe>
 										<div class="d-flex justify-content-center col-lg-12">
-											<a href="https://en.wikipedia.org/wiki/Sichuan" target="_blank">
-												<button type="button" class="btn btn-lg mt-3">
-													Find Out More
-												</button>
-											</a>
+											<button type="button" class="btn btn-lg mt-3">
+												Find Out More
+											</button>
 										</div>
 									</div>
 								</div>
@@ -254,28 +250,23 @@
 			</article>
 
 			<!-- Footer -->
-			<footer id="main-footer">
-				<div class="container">
-					<div class="row">
-						<div class="col text-center">
-							<div class="mt-5">
-								<p>Copyright &copy; 2019 Korean BOP. All rights reserved.</p>
-								<p id="contact">
-									If you have any questions feel free to contact us!
-								</p>
+			<footer class="p-3">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-6 text-center">
+									<p>Copyright &copy; 2019 Korean Bap</p>
+							</div>
+							<div class="col-lg-6 text-center">
 								<i class='fas fa-envelope fa-lg'></i>&nbsp;
 								<span>KoreanBop@gmail.com |</span>
 								<i class="fa fa-phone fa-lg"></i>&nbsp;
 								<span>778-836-2243</span>
 							</div>
 						</div>
-					</div>
-				</div>
-			</footer>
+				</footer>
 		</div>
 
-		<!-- Essential Scripts -->
-		<script src="js/firestore_fetch.js"></script>
+		<!-- Optional Scripts -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
@@ -284,5 +275,8 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
 						integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 						crossorigin="anonymous"></script>
+		<!-- Essential Scripts -->
+		<script src="js/firestore_search.js"></script>
+		<script src="js/firestore_fetch.js"></script>
 	</body>
 </html>

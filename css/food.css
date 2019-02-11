@@ -100,12 +100,3 @@ header p {
     color: var(--text-color);
 }
 
-/* Footer */
-footer {
-    background-color: var(--grey-color);
-}
-
-footer p, span {
-    font-family: var(--font-secondary);
-}
-
