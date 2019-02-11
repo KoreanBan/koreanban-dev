@@ -27,19 +27,6 @@
     background-color: transparent;
 }
 
-#h1text {
-    text-align: center
-}
-
-.lead {
-    text-align: center;
-    font-size: 25px;
-}
-
-.dropdown-menu {
-    font-size: 25px
-}
-
 #contact {
     font-size: 30px;
 }
@@ -117,6 +104,14 @@
 }
 
 /* Jumbotron */
+.jumbotron h1 {
+    font-family:var(--font-main);
+}
+
+.jumbotron p:nth-child(2) {
+    font-family:var(--font-secondary);
+}
+
 .jumbotron a {
     background-color:var(--main-color);
     color:var(--bright-color);
