@@ -17,6 +17,7 @@
 	const btnLogin = document.getElementById("login");
 	const btnLogout = document.getElementById("logout");
 	const btnCancel = document.getElementById("cancel");
+	const btnVerify = document.getElementById("verify");
 	const adminForm = document.getElementById("form");
 	
 	// Add Login Event
@@ -51,6 +52,17 @@
 			btnLogin.classList.remove('hide');
 			adminForm.innerHTML = '';
 		}
+	});
+	
+	// Add Email Verification Event
+	btnVerify.addEventListener('click', e => {
+		var user = firebase.auth().currentUser;
+		
+		user.sendEmailVerification().then(function(){
+			console.log("Email Verification Sent!");
+		}).catch(function(error){
+			console.log("Error sending:" + error);
+		})
 	});
 	
 	// Add Logout Event
