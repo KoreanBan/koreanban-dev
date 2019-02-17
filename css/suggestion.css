@@ -63,10 +63,26 @@
 #suggestion-section button:hover {
     background-color: var(--secondary-color);
 }
-
+.wrapper{
+    background: url("../assets/food/pattern2.jpg");
+}
+#cuisines_suggestion {
+    text-align: center;
+    padding-top: 30px;
+}
+.table-row{
+    background-color: white;
+}
+.text_low{
+    font-family: var(--font-main);
+}
+table{
+    font-family: var(--font-secondary);
+}
 /* Footer */
 footer {
     background-color: var(-bright-color);
+
 }
 
 footer p, span {
