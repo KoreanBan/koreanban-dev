@@ -1,30 +1,23 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Raleway:500');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600,800');
 
 /* CSS Variables */
 :root {
-	/* Colors */
-	--main-color: #0061aa;
-	--secondary-color: #ee3b33;
-	--grey-color: #5d737e;
-	--bright-color: #F9F9F9;
-	--text-color: #4a4a4a;
-	/* Overlay */
-	--dark-overlay: rgba(0, 0, 0, 0.3);
-	/* Font Family */
-	--font-main: 'Open Sans', sans-serif;
-	--font-secondary: 'Raleway', sans-serif;
+    /* Colors */
+    --main-color: #0061aa;
+    --secondary-color: #ee3b33;
+    --grey-color: #5d737e;
+    --bright-color: #F9F9F9;
+    --text-color: #4a4a4a;
+    /* Overlay */
+    --dark-overlay: rgba(0, 0, 0, 0.2);
+    /* Font Family */
+    --font-main: 'Open Sans', sans-serif;
+    --font-secondary: 'Raleway', sans-serif;
 }
 
-/* Global */
-*, *:before, *:after{
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing:border-box;
-  box-sizing: border-box;
-}
-
+/* Body */
 body {
 	background-image:url(../assets/food/pattern2.jpg);
 }
@@ -34,10 +27,21 @@ h1 {
 	font-weight:800;
 }
 
+/* Navigation */
+.navbar {
+	border-bottom:1px solid var(--bright-color);
+	box-shadow: 2px -2px 2px 2px var(--dark-overlay);
+}
+
+.nav-item a {
+	font-family: var(--font-main);
+	color: var(--link-color);
+}
+
 /* Icons */
 .nav-item img {
-	width: 70px;
-	height: 50px;
+  width:auto;  
+  height:50px;
 }
 
 /* Image */
@@ -48,7 +52,7 @@ h1 {
 }
 
 .down {
-	padding-top: 45px
+	padding-top: 45px;
 }
 
 .header {
@@ -127,3 +131,9 @@ footer {
 	background-color:var(--bright-color);
 }
 
+/* Media Queries */
+@media only screen and (max-width:468px) {
+	footer {
+			font-size:0.7rem;
+	}
+}

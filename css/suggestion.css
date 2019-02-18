@@ -18,6 +18,11 @@
 }
 
 /* Navigation */
+.navbar {
+    border-bottom:1px solid var(--bright-color);
+    box-shadow: 2px -2px 2px 2px var(--dark-overlay);
+}
+
 .nav-item a {
     font-family: var(--font-main);
     color: var(--link-color);
@@ -25,8 +30,8 @@
 
 /* Icons */
 .nav-item img {
-    width: 70px;
-    height: 50px;
+    width:auto;  
+    height:50px;
 }
 
 /* FORM HEADER */
@@ -70,21 +75,27 @@
     text-align: center;
     padding-top: 30px;
 }
-.table-row{
-    background-color: white;
-}
+
 .text_low{
     font-family: var(--font-main);
 }
-table{
+.table{
+    background-color:#fff;
     font-family: var(--font-secondary);
 }
 /* Footer */
 footer {
+    border-top:1px solid var(--dark-overlay);
     background-color: var(-bright-color);
-
 }
 
 footer p, span {
     font-family: var(--font-secondary);
+}
+
+/* Media Queries */
+@media only screen and (max-width:468px) {
+    footer {
+        font-size:0.7rem;
+    }
 }

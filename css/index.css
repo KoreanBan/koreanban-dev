@@ -17,22 +17,16 @@
     --font-secondary: 'Raleway', sans-serif;
 }
 
+  
 /* Body */
 body {
     background:url(../assets/food/pattern2.jpg);
-    background-repeat: repeat-y;
 }
-
 
 /* Navigation */
 .navbar {
     border-bottom:1px solid var(--bright-color);
     box-shadow: 2px -2px 2px 2px var(--dark-overlay);
-}
-
-.navbar-nav {
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .nav-item a {
@@ -42,13 +36,14 @@ body {
 
 /* Icons */
 .nav-item img {
-    width: 70px;
-    height: 50px;
+  width:auto;  
+  height:50px;
 }
 
 /* Carousel */
 .carousel {
-   max-width:1300px;
+   max-width:1300px; 
+   max-height:auto;
    margin:0 auto;
 }
 
@@ -133,4 +128,11 @@ body {
 footer {
     border-top:1px solid var(--dark-overlay);
     background-color:var(--bright-color);
+}
+
+/* Media Queries */
+@media only screen and (max-width:468px) {
+    footer {
+        font-size:0.7rem;
+    }
 }

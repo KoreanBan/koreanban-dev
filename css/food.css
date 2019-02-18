@@ -26,8 +26,8 @@
 
 /* Icons */
 .nav-item img {
-    width: 70px;
-    height: 50px;
+    width:auto;  
+    height:50px;
 }
 
 /* HeroImage */
@@ -100,3 +100,19 @@ header p {
     color: var(--text-color);
 }
 
+/* Footer */
+footer {
+    border-top:1px solid var(--dark-overlay);
+    background-color: var(-bright-color);
+}
+
+footer p, span {
+    font-family: var(--font-secondary);
+}
+
+/* Media Queries */
+@media only screen and (max-width:468px) {
+    footer {
+        font-size:0.7rem;
+    }
+}
