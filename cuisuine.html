@@ -1,202 +1,197 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-					integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-					integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-		<link href="css/cuisuine.css" rel="stylesheet">
-		<!-- Vue.js -->
-		<script src="node_modules/vue/dist/vue.js"></script>
-		<title>KoreanBap | Cuisine</title>
-	</head>
-	<body>
-		<div id="searchFunc">
-			<!-- Navigation -->
-			<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pb-3">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="cuisuine.html">
-						<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/logo_images%2Flogo.svg?alt=media&token=75a8ef65-e3ee-4b57-b233-05c677853dee"
-									width="150px">
-					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarContent">
-						<ul class="navbar-nav ml-auto">
-							<li class="nav-item pt-3 px-3 d-md-flex justify-content-center">
-								<search></search>
-							</li>
-							<li class="nav-item px-3">
-								<a href="index.html" class="nav-link text-sm-center text-lg-center text-md-center">
-											<span>
-												<img src="assets/icons/icon - home.png" class="m-3 mx-md-auto d-lg-block d-md-block">
-											</span>Home
-								</a>
-							</li>
-							<li class="nav-item px-3">
-								<a href="cuisuine.html" class="nav-link text-sm-center text-lg-center text-md-center">
-											<span>
-												<img src="assets/icons/icon%20-%20cuisuine.png" class="m-3 mx-md-auto d-lg-block d-md-block">
-											</span>Cuisine
-								</a>
-							</li>
-							<li class="nav-item px-3">
-								<a href="suggestion.html" class="nav-link text-sm-center text-lg-center text-md-center">
-											<span>
-												<img src="assets/icons/icon - Suggestion.png" class="m-3 mx-md-auto d-md-block d-lg-block">
-											</span>Suggestion
-								</a>
-							</li>
-							<li class="nav-item px-1">
-								<a href="admin.html" class="nav-link text-sm-center text-lg-center text-md-center">
-											<span>
-												<img src="assets/icons/icon - Contact.png" class="m-3 mx-md-auto d-md-block d-lg-block">
-											</span>Admin Login
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-			<!-- Cuisine Page Body -->
-			<h1 class="display-3 header">Cuisines</h1>
-			<div class="container cuisine_container mb-5">
-				<div class="down">
-					<div class="row no-gutters">
-						<div class="col-md-4 col-sm-12 content">
-							<a href="food_kfc.html" target="_blank">
-								<div class="content-overlay"></div>
-								<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fsweet_sour_chicken_opt.jpg?alt=media&token=960cc7f9-747d-41fd-a391-b2b21e459b42" class="img-fluid">
-								<div class="content-details fadeIn-top">
-									<h3>Korean Spicy Chicken</h3>
-									<p>깐풍기</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 col-sm-12 content">
-							<a href="food_sundae.html" target="_blank">
-								<div class="content-overlay"></div>
-								<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fsundae_opt.jpg?alt=media&token=abedf88d-2268-4d4a-9a9a-0ec70d150207" class="img-fluid">
-								<div class="content-details fadeIn-top">
-									<h3>Black Pudding</h3>
-									<p>순대</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 col-sm-12 content">
-							<a href="food_tteok.html" target="_blank">
-								<div class="content-overlay"></div>
-								<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Frice_cake_opt.jpg?alt=media&token=31bae3d6-970e-4848-8d4d-b679fce5875b" class="img-fluid">
-								<div class="content-details fadeIn-top">
-									<h3>Spicy Rice Cake</h3>
-									<p>떡볶이</p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<!-- Second Row -->
-					<div class="row no-gutters">
-						<div class="col-md-4 col-sm-12 content">
-							<a href="food_pancake.html" target="_blank">
-								<div class="content-overlay"></div>
-								<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fpancake_opt.jpg?alt=media&token=e9ee3251-2ca1-4c3f-9cd2-5ed3fe44d795" class="img-fluid">
-								<div class="content-details fadeIn-top">
-										<h3>Korean Pancake</h3>
-										<p>부침개</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 col-sm-12 content">
-							<a href="food_noodles.html" target="_blank">
-								<div class="content-overlay"></div>
-								<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fnaengmyeon_opt.jpg?alt=media&token=3d4454fe-bc93-47f2-9b12-bd06f8d95ca6" class="img-fluid">
-								<div class="content-details fadeIn-top">
-									<h3>Free-style Spicy Noodles</h3>
-									<p>비빔국수</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 col-sm-12 content">
-							<a href="food_kimchi.html" target="_blank">
-								<div class="content-overlay"></div>
-								<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fkimchi_fried_rice_opt.jpg?alt=media&token=3abc8b52-e024-4b6d-a245-4e00b82ec47e" class="img-fluid">
-								<div class="content-details fadeIn-top">
-										<h3>Kimchi Fried Rice</h3>
-										<p>김치볶음밥</p>
-									</div>
-							</div>
-						</a>
-					</div>
-				<!-- Third Row -->
-				<div class="row no-gutters">
-					<div class="col-md-4 col-sm-12 content">
-						<a href="food_hotteok.html" target="_blank">
-							<div class="content-overlay"></div>
-							<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fhotteok_opt.jpg?alt=media&token=b29fe032-26cb-4e03-9f95-e6e525ca8107" class="img-fluid">
-							<div class="content-details fadeIn-top">
-								<h3>Sweet Pancake</h3>
-								<p>호떡</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 col-sm-12 content">
-						<a href="food_milmyeon.html" target="_blank">
-							<div class="content-overlay"></div>
-							<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fcold_noodle_opt.jpg?alt=media&token=d30505dc-b03d-484a-9c32-30b3f2c0beda" class="img-fluid">
-							<div class="content-details fadeIn-top">
-								<h3>Cold Spicy Noodles</h3>
-								<p>밀면</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 col-sm-12 content">
-						<a href="food_bunge.html" target="_blank">
-							<div class="content-overlay"></div>
-							<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fbungeo_ppang_opt.jpg?alt=media&token=e4004404-68c4-4205-a3fe-bf4a2efce7ef" class="img-fluid">
-							<div class="content-details fadeIn-top">
-								<h3>Red Bean Fish-shaped Cake</h3>
-								<p>붕어빵</p>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-			<!-- Footer -->
-			<footer class="p-3">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-lg-6 text-center">
-								<p>Copyright &copy; 2019 Korean Bop</p>
-						</div>
-						<div class="col-lg-6 text-center">
-							<i class='fas fa-envelope fa-md'></i>
-							<span>KoreanBop@gmail.com |</span>
-							<i class="fa fa-phone fa-md"></i>
-							<span>778-836-2243</span>
-						</div>
-					</div>
-			</footer>
-		</div>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="css/cuisuine.css" rel="stylesheet">
+    <!-- Vue.js -->
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <title>KoreanBap | Cuisine</title>
+  </head>
+  <body>
+    <div id="searchFunc">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pb-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="cuisuine.html">
+            <img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/logo_images%2Flogo.svg?alt=media&token=75a8ef65-e3ee-4b57-b233-05c677853dee"
+                 width="150px">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item pt-3 px-3 d-md-flex justify-content-center">
+                <search></search>
+              </li>
+              <li class="nav-item px-3">
+                <a href="index.html" class="nav-link text-sm-center text-lg-center text-md-center">
+                  <span>
+                    <img src="assets/icons/icon - home.png" class="m-3 mx-md-auto d-lg-block d-md-block">
+                  </span>Home
+                </a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="cuisuine.html" class="nav-link text-sm-center text-lg-center text-md-center">
+                  <span>
+                    <img src="assets/icons/icon%20-%20cuisuine.png" class="m-3 mx-md-auto d-lg-block d-md-block">
+                  </span>Cuisine
+                </a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="suggestion.html" class="nav-link text-sm-center text-lg-center text-md-center">
+                  <span>
+                    <img src="assets/icons/icon - Suggestion.png" class="m-3 mx-md-auto d-md-block d-lg-block">
+                  </span>Suggestion
+                </a>
+              </li>
+              <li class="nav-item px-1">
+                <a href="admin.html" class="nav-link text-sm-center text-lg-center text-md-center">
+                  <span>
+                    <img src="assets/icons/icon - Contact.png" class="m-3 mx-md-auto d-md-block d-lg-block">
+                  </span>Admin Login
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Cuisine Page Body -->
+      <h1 class="display-3 header">Cuisines</h1>
+      <div class="container cuisine_container mb-5">
+        <div class="down">
+          <div class="row no-gutters">
+            <div class="col-md-4 col-sm-12 content">
+              <a href="food_kfc.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fsweet_sour_chicken_opt.jpg?alt=media&token=960cc7f9-747d-41fd-a391-b2b21e459b42" class="img-fluid">
+                <div class="content-details fadeIn-top">
+                  <h3>Korean Spicy Chicken</h3>
+                  <p>깐풍기</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-12 content">
+              <a href="food_sundae.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fsundae_opt.jpg?alt=media&token=abedf88d-2268-4d4a-9a9a-0ec70d150207" class="img-fluid">
+                <div class="content-details fadeIn-top">
+                  <h3>Black Pudding</h3>
+                  <p>순대</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-12 content">
+              <a href="food_tteok.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Frice_cake_opt.jpg?alt=media&token=31bae3d6-970e-4848-8d4d-b679fce5875b" class="img-fluid">
+                <div class="content-details fadeIn-top">
+                  <h3>Spicy Rice Cake</h3>
+                  <p>떡볶이</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Second Row -->
+          <div class="row no-gutters">
+            <div class="col-md-4 col-sm-12 content">
+              <a href="food_pancake.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fpancake_opt.jpg?alt=media&token=e9ee3251-2ca1-4c3f-9cd2-5ed3fe44d795" class="img-fluid">
+                <div class="content-details fadeIn-top">
+                  <h3>Korean Pancake</h3>
+                  <p>부침개</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-12 content">
+              <a href="food_noodles.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fnaengmyeon_opt.jpg?alt=media&token=3d4454fe-bc93-47f2-9b12-bd06f8d95ca6" class="img-fluid">
+                <div class="content-details fadeIn-top">
+                  <h3>Free-style Spicy Noodles</h3>
+                  <p>비빔국수</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-12 content">
+              <a href="food_kimchi.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fkimchi_fried_rice_opt.jpg?alt=media&token=3abc8b52-e024-4b6d-a245-4e00b82ec47e" class="img-fluid">
+                <div class="content-details fadeIn-top">
+                  <h3>Kimchi Fried Rice</h3>
+                  <p>김치볶음밥</p>
+                </div>
+              </a>
+            </div>
+            <!-- Third Row -->
+            <div class="row no-gutters">
+              <div class="col-md-4 col-sm-12 content">
+                <a href="food_hotteok.html" target="_blank">
+                  <div class="content-overlay"></div>
+                  <img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fhotteok_opt.jpg?alt=media&token=b29fe032-26cb-4e03-9f95-e6e525ca8107" class="img-fluid">
+                  <div class="content-details fadeIn-top">
+                    <h3>Sweet Pancake</h3>
+                    <p>호떡</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-12 content">
+                <a href="food_milmyeon.html" target="_blank">
+                  <div class="content-overlay"></div>
+                  <img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fcold_noodle_opt.jpg?alt=media&token=d30505dc-b03d-484a-9c32-30b3f2c0beda" class="img-fluid">
+                  <div class="content-details fadeIn-top">
+                    <h3>Cold Spicy Noodles</h3>
+                    <p>밀면</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-12 content">
+                <a href="food_bunge.html" target="_blank">
+                  <div class="content-overlay"></div>
+                  <img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/food_images%2Fbungeo_ppang_opt.jpg?alt=media&token=e4004404-68c4-4205-a3fe-bf4a2efce7ef" class="img-fluid">
+                  <div class="content-details fadeIn-top">
+                    <h3>Red Bean Fish-shaped Cake</h3>
+                    <p>붕어빵</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="p-3">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 text-center">
+              <p>Copyright &copy; 2019 Korean Bop</p>
+            </div>
+            <div class="col-lg-6 text-center">
+              <i class='fas fa-envelope fa-md'></i>
+              <span>KoreanBop@gmail.com |</span>
+              <i class="fa fa-phone fa-md"></i>
+              <span>778-836-2243</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
 
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-						integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-						crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-						integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-						crossorigin="anonymous"></script>
-		<!-- Essential Scripts -->
-		<script src="js/comps.js"></script>
-		<script src="js/firestore_cuisine.js"></script>
-		<script src="js/firestore_search.js"></script>
-	</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- Essential Scripts -->
+    <script src="js/comps.js"></script>
+    <script src="js/firestore_cuisine.js"></script>
+    <script src="js/firestore_search.js"></script>
+  </body>
 </html>
