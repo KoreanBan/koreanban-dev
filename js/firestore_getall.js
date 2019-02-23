@@ -15,12 +15,10 @@ var firestore = firebase.firestore();
 var cuisines_get = new Vue({
   el:"#cuisinesGet",
   data:{
-    allcuisines:[]
+    allcuisines:[],
+    showModal: false
   },
-  created: function(){
-    this.getCuisines();
-  },
-  getCuisines: async function(){
+  created: async function(){
     var snapshots = await firestore.collection('koreanbap-cuisines').get();
 
     var arr = [];
@@ -31,9 +29,11 @@ var cuisines_get = new Vue({
     this.allcuisines = arr;
     console.log(this.allcuisines);
   },
-  OpenModal:function(c){
-    console.log(c);
-    //cus_modal.food_obj = c
-    //cus_modal.show = true
-  },
+  methods:{
+    OpenModal:function(c){
+      console.log(c);
+      //Modal.food_obj = c
+      this.showModal = !this.showModal;
+    }  
+  }
 });

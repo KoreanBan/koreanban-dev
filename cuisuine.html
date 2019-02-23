@@ -15,6 +15,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
+
     <title>KoreanBap | Cuisine</title>
   </head>
   <body>
@@ -69,11 +70,6 @@
     </div>
 
     <!-- Cuisine Page Body -->
-    <div id="cuisinesGet">
-      <div v-for="c in allcuisines" @click="OpenModal(c)">
-        {{c.food_name}}
-      </div>
-    </div>
     <h1 class="display-3 header">Cuisines</h1>
     <div class="container cuisine_container mb-5">
       <div class="down">
@@ -177,6 +173,23 @@
         </div>
       </div>
     </div>
+
+    <!-- Content trial -->
+
+    <div id="cuisinesGet" >      
+      <div v-for="c in allcuisines" @click="OpenModal(c)" class="col-md-4 col-sm-12 content">
+        <div class="content-overlay"></div>
+        <img :src="c.food_image" class="img-fluid"/>
+        <div class="content-details fadeIn-top">
+          <h3>{{c.food_name}}</h3>
+        </div>
+      </div>
+      
+      <cuisModal></cuisModal>
+    </div>
+
+
+
     <!-- Footer -->
     <footer class="p-3">
       <div class="container-fluid">
