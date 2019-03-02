@@ -36,12 +36,6 @@ var cuisines_fetch = new Vue({
 	mounted:function(){
 		firestore.collection('koreanbap-cuisines').doc("tMD4weiXMH0zLOUB0raX").get().then((doc)=>{
 			console.log(doc.data());
-			//        querySnapshot.forEach((doc)=>{
-			//          console.log(doc)
-			//          console.log(doc.id, "=>", doc.data());
-			//          var obj = doc.data();
-			//          this.food = obj
-			//        });
 			var obj = doc.data();
 			this.f = obj;
 		}).catch(function(error){

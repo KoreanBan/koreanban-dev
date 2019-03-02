@@ -38,7 +38,6 @@ var suggest_form = new Vue({
 	}
 });
 
-
 var suggestion_get = new Vue({
 	el:"#suggestionList",
 	data:{
