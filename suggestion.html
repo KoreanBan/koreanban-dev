@@ -146,13 +146,13 @@
 						<h3 class="text_low">Recent User Suggestions</h3>
 					</div>
 					<div>
-						<div class="row table-row" v-for="s in allSuggestion">
+						<div class="row table-row">
 							<table class="table table-bordered" >
 								<tr>
 									<th scope="col">User Name</th>
 									<th scope="col">User Suggestion</th>
 								</tr>
-								<tr>
+								<tr v-for="s in allSuggestion">
 									<td>{{s.suggest_name}}</td>
 									<td>{{s.suggest_content}}</td>
 								</tr>
