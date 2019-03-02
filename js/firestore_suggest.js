@@ -38,29 +38,3 @@ var suggest_form = new Vue({
 	}
 });
 
-var cuisines_fetch = new Vue({
-	el:"#cuisines_suggestion",
-	data:{
-		s:{
-			suggest_name:"",
-			suggest_email:"",
-			suggest_content:""
-		}
-	},
-	mounted:function(){
-		firestore.collection('koreanbap-suggestion').doc("1qgVmiUsVazeshjD5dU2").get().then((doc)=>{
-			console.log(doc.data());
-			//        querySnapshot.forEach((doc)=>{
-			//          console.log(doc)
-			//          console.log(doc.id, "=>", doc.data());
-			//          var obj = doc.data();
-			//          this.food = obj
-			//        });
-			var obj = doc.data();
-			this.s = obj;
-		}).catch(function(error){
-			console.log("Error getting documents:", error);
-		});
-	}
-});
-
