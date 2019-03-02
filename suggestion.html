@@ -1,207 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <link href="css/suggestion.css" rel="stylesheet">
-  <!-- Vue.js -->
-  <script src="node_modules/vue/dist/vue.js"></script>
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
-  <script src="js/comps.js"></script>
-  <title>KoreanBap | Suggestion</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+					integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+					integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link href="css/suggestion.css" rel="stylesheet">
+		<!-- Vue.js -->
+		<script src="node_modules/vue/dist/vue.js"></script>
+		<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
+		<script src="js/comps.js"></script>
+		<title>KoreanBap | Suggestion</title>
+	</head>
+	<body>
 
-<!-- Navigation -->
-<div id="searchFunc">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pb-3">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="cuisuine.html">
-        <img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/logo_images%2Flogo.svg?alt=media&token=75a8ef65-e3ee-4b57-b233-05c677853dee"
-             width="150px">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+		<!-- Navigation -->
+		<div id="searchFunc">
+			<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pb-3">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="cuisuine.html">
+						<img src="https://firebasestorage.googleapis.com/v0/b/koreanban-2019.appspot.com/o/logo_images%2Flogo.svg?alt=media&token=75a8ef65-e3ee-4b57-b233-05c677853dee"
+								 width="150px">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item pt-3 px-3 d-md-flex justify-content-center">
-            <search></search>
-          </li>
-          <li class="nav-item px-3">
-            <a href="index.html" class="nav-link text-sm-center text-lg-center text-md-center">
+					<div class="collapse navbar-collapse" id="navbarContent">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item pt-3 px-3 d-md-flex justify-content-center">
+								<search></search>
+							</li>
+							<li class="nav-item px-3">
+								<a href="index.html" class="nav-link text-sm-center text-lg-center text-md-center">
 									<span>
 										<img src="assets/icons/icon - home.png" class="m-3 mx-md-auto d-lg-block d-md-block">
 									</span>Home
-            </a>
-          </li>
-          <li class="nav-item px-3">
-            <a href="cuisuine.html" class="nav-link text-sm-center text-lg-center text-md-center">
+								</a>
+							</li>
+							<li class="nav-item px-3">
+								<a href="cuisuine.html" class="nav-link text-sm-center text-lg-center text-md-center">
 									<span>
 										<img src="assets/icons/icon%20-%20cuisuine.png" class="m-3 mx-md-auto d-lg-block d-md-block">
 									</span>Cuisine
-            </a>
-          </li>
-          <li class="nav-item px-3">
-            <a href="suggestion.html" class="nav-link text-sm-center text-lg-center text-md-center">
+								</a>
+							</li>
+							<li class="nav-item px-3">
+								<a href="suggestion.html" class="nav-link text-sm-center text-lg-center text-md-center">
 									<span>
 										<img src="assets/icons/icon - Suggestion.png" class="m-3 mx-md-auto d-md-block d-lg-block">
 									</span>Suggestion
-            </a>
-          </li>
-          <li class="nav-item px-1">
-            <a href="admin.html" class="nav-link text-sm-center text-lg-center text-md-center">
+								</a>
+							</li>
+							<li class="nav-item px-1">
+								<a href="admin.html" class="nav-link text-sm-center text-lg-center text-md-center">
 									<span>
 										<img src="assets/icons/icon - Contact.png" class="m-3 mx-md-auto d-md-block d-lg-block">
 									</span>Admin Login
-            </a>
-          </li>
-        </ul>
-      </div>
+								</a>
+							</li>
+						</ul>
+					</div>
 
-    </div>
-  </nav>
-</div>
+				</div>
+			</nav>
+		</div>
 
-<!-- FORM HEADER -->
-<div id="suggestForm">
-  <header id="suggestion-section">
-    <div class="dark-overlay">
-      <div class="home-inner">
-        <div class="container">
-          <div class="row">
-            <div class="col col-lg-8 d-none d-lg-block">
-              <h1 class="display-4">Your <strong class="text-danger">Suggestion</strong> is appreciated!
-              </h1>
-              <div class="d-flex flex-row">
-                <div class="p-4 align-self-start">
-                  <i class="fa fa-check"></i>
-                </div>
-                <div class="p-4 align-self-end">
-                  Please choose Korean Cuisuine only as that is what we specialize in.
-                </div>
-              </div>
-              <div class="d-flex flex-row">
-                <div class="p-4 align-self-start">
-                  <i class="fa fa-check"></i>
-                </div>
-                <div class="p-4 align-self-end">
-                  By submitting your suggestion, you are automatically entered for a chance to win a 10-day trip to
-                  South Korea!
-                </div>
-              </div>
-              <div class="d-flex flex-row">
-                <div class="p-4 align-self-start">
-                  <i class="fa fa-check"></i>
-                </div>
-                <div class="p-4 align-self-end">
-                  The new food menu and a winner gets announced every month via email. Be sure to follow us on
-                  Instagram, Facebook, Twitter, LinkedIn, Snapchat, and last but not least...Myspace!
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card text-center card-form mb-5">
-                <div class="card-body">
-                  <h3 class="text-dark">Food Suggestion Box</h3>
-                  <p class="text-dark">Please fill out the following</p>
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" placeholder="Full Name"
-                           v-model="suggest_name">
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" placeholder="Email"
-                           v-model="suggest_email">
-                  </div>
-                  <div class="form-group">
-                    <label class="text-dark" for="exampleFormControlTextarea1">What do you want us to cook next?</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-                              placeholder="You can be more creative than Kimchi :)"
-                              v-model="suggest_content"></textarea>
-                  </div>
-                  <button type="submit" value="Submit" class="btn btn-block" @click="addSuggestion()">Submit</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-</div>
+		<!-- FORM HEADER -->
+		<div id="suggestForm">
+			<header id="suggestion-section">
+				<div class="dark-overlay">
+					<div class="home-inner">
+						<div class="container">
+							<div class="row">
+								<div class="col col-lg-8 d-none d-lg-block">
+									<h1 class="display-4">Your <strong class="text-danger">Suggestion</strong> is appreciated!
+									</h1>
+									<div class="d-flex flex-row">
+										<div class="p-4 align-self-start">
+											<i class="fa fa-check"></i>
+										</div>
+										<div class="p-4 align-self-end">
+											Please choose Korean Cuisuine only as that is what we specialize in.
+										</div>
+									</div>
+									<div class="d-flex flex-row">
+										<div class="p-4 align-self-start">
+											<i class="fa fa-check"></i>
+										</div>
+										<div class="p-4 align-self-end">
+											By submitting your suggestion, you are automatically entered for a chance to win a 10-day trip to
+											South Korea!
+										</div>
+									</div>
+									<div class="d-flex flex-row">
+										<div class="p-4 align-self-start">
+											<i class="fa fa-check"></i>
+										</div>
+										<div class="p-4 align-self-end">
+											The new food menu and a winner gets announced every month via email. Be sure to follow us on
+											Instagram, Facebook, Twitter, LinkedIn, Snapchat, and last but not least...Myspace!
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="card text-center card-form mb-5">
+										<div class="card-body">
+											<h3 class="text-dark">Food Suggestion Box</h3>
+											<p class="text-dark">Please fill out the following</p>
+											<div class="form-group">
+												<input type="text" class="form-control form-control-lg" placeholder="Full Name" v-model="suggest_name">
+											</div>
+											<div class="form-group">
+												<input type="email" class="form-control form-control-lg" placeholder="Email" v-model="suggest_email">
+											</div>
+											<div class="form-group">
+												<label class="text-dark" for="exampleFormControlTextarea1">What do you want us to cook next?</label>
+												<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"placeholder="You can be more creative than Kimchi :)" v-model="suggest_content"></textarea>
+											</div>
+											<button type="submit" value="Submit" class="btn btn-block" @click="addSuggestion()">Submit</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
 
-<!-- User Suggestions Section -->
+		<!-- User Suggestions Section -->
 
-<div class="wrapper">
-<div class="container mx-auto" id="cuisines_suggestion">
-  <div class="row mx-auto">
-    <h3 class="text_low">Recent User Suggestions</h3>
-  </div>
-  <div>
-    <div class="row table-row">
-    <table class="table table-bordered">
-      <tr>
-        <th scope="col">User Name</th>
-        <th scope="col">User Suggestion</th>
-      </tr>
-      <tr>
-        <td>{{s.suggest_name}}</td>
-        <td>{{s.suggest_content}}</td>
-      </tr>
-      <tr>
-        <td>{{s.suggest_name}}</td>
-        <td>{{s.suggest_content}}</td>
-      </tr>
-      <tr>
-        <td>{{s.suggest_name}}</td>
-        <td>{{s.suggest_content}}</td>
-      </tr>
-    </table>
-    </div>
-    </div>
-  </div>
-</div>
-<!-- Footer -->
-<footer class="p-5">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-6 text-center">
-        <p>Copyright &copy; 2019 Korean Bop</p>
-      </div>
-      <div class="col-lg-6 text-center">
-        <i class='fas fa-envelope fa-md'></i>
-        <span>KoreanBop@gmail.com |</span>
-        <i class="fa fa-phone fa-md"></i>
-        <span>778-836-2243</span>
-      </div>
-    </div>
-  </div>
-</footer>
+		<div class="wrapper">
+			<div class="container mx-auto" id="cuisines_suggestion">
+				<div class="row mx-auto">
+					<h3 class="text_low">Recent User Suggestions</h3>
+				</div>
+				<div id="suggestionList">
+					<div class="row table-row" v-for="s in allSuggestion">
+						<table class="table table-bordered">
+							<tr>
+								<th scope="col">User Name</th>
+								<th scope="col">User Suggestion</th>
+							</tr>
+							<tr>
+								<td>{{s.suggest_name}}</td>
+								<td>{{s.suggest_content}}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		<footer class="p-5">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6 text-center">
+						<p>Copyright &copy; 2019 Korean Bop</p>
+					</div>
+					<div class="col-lg-6 text-center">
+						<i class='fas fa-envelope fa-md'></i>
+						<span>KoreanBop@gmail.com |</span>
+						<i class="fa fa-phone fa-md"></i>
+						<span>778-836-2243</span>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 
-<!-- Essential Scripts -->
-<script src="js/firestore_suggest.js"></script>
-<script src="js/firestore_search.js"></script>
-<!-- Optional Scripts -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-</body>
+		<!-- Essential Scripts -->
+		<script src="js/firestore_getall.js"></script>
+		<script src="js/firestore_suggest.js"></script>
+		<script src="js/firestore_search.js"></script>
+		<!-- Optional Scripts -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	</body>
 </html>
