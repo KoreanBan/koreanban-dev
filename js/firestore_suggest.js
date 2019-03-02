@@ -38,3 +38,22 @@ var suggest_form = new Vue({
 	}
 });
 
+
+var suggestion_get = new Vue({
+	el:"#suggestionList",
+	data:{
+		allSuggestion:[]
+	},
+	created: async function(){
+		var snaps = await firestore.collection('koreanbap-suggestion').get();
+		
+		var arrSuggest = [];
+		snaps.forEach((docs)=>{
+			arrSuggest.push(docs.data());
+			console.log(docs.data());
+		})
+		this.allSuggestion = arrSuggest;
+		console.log(this.allSuggestion);
+	}
+});
+

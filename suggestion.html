@@ -139,24 +139,25 @@
 		</div>
 
 		<!-- User Suggestions Section -->
-
-		<div class="wrapper" >
-			<div class="container mx-auto" id="cuisines_suggestion">
-				<div class="row mx-auto">
-					<h3 class="text_low">Recent User Suggestions</h3>
-				</div>
-				<div id="suggestionList" >
-					<div class="row table-row" v-for="s in allSuggestion">
-						<table class="table table-bordered" >
-							<tr>
-								<th scope="col">User Name</th>
-								<th scope="col">User Suggestion</th>
-							</tr>
-							<tr>
-								<td>{{s.suggest_name}}</td>
-								<td>{{s.suggest_content}}</td>
-							</tr>
-						</table>
+		<div id="suggestionList">
+			<div class="wrapper" >
+				<div class="container mx-auto" id="cuisines_suggestion">
+					<div class="row mx-auto">
+						<h3 class="text_low">Recent User Suggestions</h3>
+					</div>
+					<div>
+						<div class="row table-row" v-for="s in allSuggestion">
+							<table class="table table-bordered" >
+								<tr>
+									<th scope="col">User Name</th>
+									<th scope="col">User Suggestion</th>
+								</tr>
+								<tr>
+									<td>{{s.suggest_name}}</td>
+									<td>{{s.suggest_content}}</td>
+								</tr>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -181,9 +182,8 @@
 
 
 		<!-- Essential Scripts -->
-		<script src="js/firestore_search.js"></script>
 		<script src="js/firestore_suggest.js"></script>
-		<script src="js/firestore_getsuggestion.js"></script>
+		<script src="js/firestore_search.js"></script>
 		<!-- Optional Scripts -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
