@@ -10,31 +10,37 @@ var config = {
 firebase.initializeApp(config);
 var firestore = firebase.firestore();
 
-const docRef = firestore.collection('koreanbap-suggestion');
+//const docRef = firestore.collection('koreanbap-suggestion');
 
 var cuisines_fetch = new Vue({
 	el:"#cuisines_suggestion",
 	data:{
-		s:{
-			suggest_name:"",
-			suggest_email:"",
-			suggest_content:""
+		allSuggestion:[],
+	},
+	firestore(){
+		return {
+			suggestions: db.collection('koreanbap-suggestion')
 		}
 	},
-	mounted:function(){
-		firestore.collection('koreanbap-suggestion').doc("1qgVmiUsVazeshjD5dU2").get().then((doc)=>{
-			console.log(doc.data());
-			//        querySnapshot.forEach((doc)=>{
-			//          console.log(doc)
-			//          console.log(doc.id, "=>", doc.data());
-			//          var obj = doc.data();
-			//          this.food = obj
-			//        });
-			var obj = doc.data();
-			this.s = obj;
-		}).catch(function(error){
-			console.log("Error getting documents:", error);
-		});
+	created: async function(){
+		var snaps = await firestore.collection('koreanbap-suggestion').get();
+		
+		var arrSuggest = [];
+		snaps.forEach((docs)=>{
+			arrSuggest.push(docs.data());
+			console.log(docs.data());
+		})
+		this.allSuggestion = arrSuggest;
+		console.log(this.allSuggestion);
+	},
+	methods:{
+		deleteSuggestion: function(s){
+			firestore.collection('koreanbap-suggestion').delete().then(function(){
+				console.log("Deleted");
+			}).catch(function(error){
+				console.log("Error:", error)
+			})
+		}
 	}
 });
 

@@ -15,22 +15,7 @@ const docRef = firestore.collection('koreanbap-cuisines').doc();
 var cuisines_edit = new Vue({
 	el:"#cuisines_edit",
 	data:{
-    d:{ 
-      food_name:"",
-      food_desc:"",
-      food_origin:"",
-      food_ingredients: [
-        {
-          quantity:"",
-          list:""
-        }
-      ],
-      food_recipes: [
-        {
-          list:""
-        }
-      ]
-    }
+    editCuisines: []
 	},
 	methods:{
 		editKFC: function(){
@@ -44,19 +29,15 @@ var cuisines_edit = new Vue({
 			});
 		}
 	},
-	mounted:function(){
-		firestore.collection('koreanbap-cuisines').doc("tMD4weiXMH0zLOUB0raX").get().then((doc)=>{
-			console.log(doc.data());
-			//        querySnapshot.forEach((doc)=>{
-			//          console.log(doc)
-			//          console.log(doc.id, "=>", doc.data());
-			//          var obj = doc.data();
-			//          this.food = obj
-			//        });
-			var obj = doc.data();
-			this.d = obj;
-		}).catch(function(error){
-			console.log("Error getting documents:", error);
-		});
+	created: async function(){
+		var snapCuisines = await firestore.collection('koreanbap-cuisines').get();
+		
+		var arrCuisines = [];
+		snapCuisines.forEach((docs)=>{
+			arrCuisines.push(docs.data());
+			console.log(docs.data());
+		})
+		this.editCuisines = arrCuisines;
+		console.log(this.editCuisines);
 	}
 });

@@ -19,7 +19,7 @@
 		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
 	</head>
 	<body>
-		<div class="wrapper container" id="cuisines_suggestion">
+		<div class="wrapper container">
 			<div class="row">
 				<div class="mx-auto my-3">
 					<a href="cuisine_database.html" style="color: white">
@@ -38,7 +38,7 @@
 					</h3>
 
 					<!-- Suggestion List -->
-					<div class="row mx-3">
+					<div class="row mx-3" id="cuisines_suggestion">
 						<table class="table table-bordered">
 							<tr>
 								<th scope="col">User Name</th>
@@ -46,28 +46,12 @@
 								<th scope="col">User Suggestion</th>
 								<th scope="col">Actions</th>
 							</tr>
-							<tr>
+							<tr v-for="s in allSuggestion">
 								<td>{{s.suggest_name}}</td>
 								<td>{{s.suggest_email}}</td>
 								<td>{{s.suggest_content}}</td>
 								<td>
-									<button class="btn">Delete</button>
-								</td>
-							</tr>
-							<tr>
-								<td>{{s.suggest_name}}</td>
-								<td>{{s.suggest_email}}</td>
-								<td>{{s.suggest_content}}</td>
-								<td>
-									<button class="btn">Delete</button>
-								</td>
-							</tr>
-							<tr>
-								<td>{{s.suggest_name}}</td>
-								<td>{{s.suggest_email}}</td>
-								<td>{{s.suggest_content}}</td>
-								<td>
-									<button class="btn">Delete</button>
+									<button class="btn" @click="deleteSuggestion(s)">Delete</button>
 								</td>
 							</tr>
 						</table>
