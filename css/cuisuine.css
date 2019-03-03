@@ -65,7 +65,8 @@ h1 {
 .content {
 	position: relative;
 	margin:auto;
-	overflow:hidden;
+  overflow:hidden;
+  cursor: pointer;
 }
 
 .content-overlay {
@@ -123,6 +124,16 @@ h1 {
 	font-family: var(--font-secondary);
 	color:var(--bright-color);
 	font-weight:500;
+}
+
+/* Modal */
+.modal {
+  position: absolute;
+  top:0;
+  margin:auto;
+  background:rgba(0, 0, 0, 0.2);
+  left:0;
+  right:0;
 }
 
 /* Footer */

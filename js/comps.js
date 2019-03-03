@@ -12,8 +12,10 @@ Vue.component('search', {
 </form>'
 });
 
+
 Vue.component('cuisModal', {
-  template: '<div v-for="a in allcuisines">\
+  template: '<div  v-if="modal" class="modal" v-for="a in allcuisines">\
         <p>{{a.food_name}}</p>\
       </div>'
 });
+

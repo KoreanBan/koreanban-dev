@@ -30,10 +30,12 @@ var cuisines_get = new Vue({
     console.log(this.allcuisines);
   },
   methods:{
-    OpenModal:function(c){
-      console.log(c);
-      //Modal.food_obj = c
-      this.showModal = !this.showModal;
+    OpenModal:function(){
+      if(this.modal == false){
+        this.modal = true;
+      } else {
+        this.modal = false;
+      }
     }  
   }
 });

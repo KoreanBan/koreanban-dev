@@ -175,16 +175,17 @@
 
 		<!-- Content trial -->
 
-		<div id="cuisinesGet" >      
-			<div v-for="c in allcuisines" @click="OpenModal(c)" class="col-md-4 col-sm-12 content">
+		<div id="cuisinesGet">      
+			<div v-for="c in allcuisines" @click="OpenModal(c)" class="content">
 				<div class="content-overlay"></div>
 				<img :src="c.food_image" class="img-fluid"/>
 				<div class="content-details fadeIn-top">
-					<h3>{{c.food_name}}</h3>
+					<h3 class="grid text-light">{{c.food_name}}</h3>
 				</div>
 			</div>
-
-			<cuisModal></cuisModal>
+			<transition name="fade">
+				<cuisModal></cuisModal>
+			</transition>
 		</div>
 
 
