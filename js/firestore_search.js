@@ -12,6 +12,12 @@ firebase.initializeApp(config);
 var search = new Vue({
 	el:"#searchFunc",
 	data:{
+		allSearch: [],
 		search:""
+	},
+	methods:{
+		searchButton: function(){
+			firestore.collection('koreanbap-cuisines').doc().where();
+		}
 	}
 })
