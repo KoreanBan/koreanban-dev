@@ -17,11 +17,6 @@ var cuisines_fetch = new Vue({
 	data:{
 		allSuggestion:[],
 	},
-	firestore(){
-		return {
-			suggestions: db.collection('koreanbap-suggestion')
-		}
-	},
 	created: async function(){
 		var snaps = await firestore.collection('koreanbap-suggestion').get();
 		

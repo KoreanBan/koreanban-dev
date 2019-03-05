@@ -22,8 +22,8 @@ var cuisines_edit = new Vue({
 			window.location.href = 'cuisine_edit_update_kfc.html';
 		},
 		deleteData: function(e){
-			firestore.collection('koreanbap-cuisines').doc('c').delete(e).then(function(){
-				console.log("Dummy file successfully deleted");
+			firestore.collection('koreanbap-cuisines').doc(e).delete().then(function(){
+				console.log("File successfully deleted");
 			}).catch(function(error){
 				console.log("Error deleting file:", error);
 			});
