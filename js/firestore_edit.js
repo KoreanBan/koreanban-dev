@@ -18,11 +18,11 @@ var cuisines_edit = new Vue({
     editCuisines: []
 	},
 	methods:{
-		editKFC: function(){
+		editKFC: function(e){
 			window.location.href = 'cuisine_edit_update_kfc.html';
 		},
-		deleteData: function(){
-			firestore.collection('koreanbap-cuisines').doc('9Wdf9zckkgziWUvlmBMK').delete().then(function(){
+		deleteData: function(e){
+			firestore.collection('koreanbap-cuisines').doc('c').delete(e).then(function(){
 				console.log("Dummy file successfully deleted");
 			}).catch(function(error){
 				console.log("Error deleting file:", error);

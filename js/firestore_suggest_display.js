@@ -35,7 +35,7 @@ var cuisines_fetch = new Vue({
 	},
 	methods:{
 		deleteSuggestion: function(s){
-			firestore.collection('koreanbap-suggestion').delete().then(function(){
+			firestore.collection('koreanbap-suggestion').doc(s).delete().then(function(){
 				console.log("Deleted");
 			}).catch(function(error){
 				console.log("Error:", error)
