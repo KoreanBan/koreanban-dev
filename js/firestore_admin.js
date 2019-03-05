@@ -59,9 +59,9 @@
 		var user = firebase.auth().currentUser;
 		
 		user.sendEmailVerification().then(function(){
-			console.log("Email Verification Sent!");
+			alert("Email Verification Sent!");
 		}).catch(function(error){
-			console.log("Error sending:" + error);
+			alert("Error sending verification:" + error);
 		})
 	});
 	

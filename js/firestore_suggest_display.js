@@ -22,18 +22,22 @@ var cuisines_fetch = new Vue({
 		
 		var arrSuggest = [];
 		snaps.forEach((docs)=>{
-			arrSuggest.push(docs.data());
-			console.log(docs.data());
+      var obj = docs.data();
+      obj.id = docs.id;
+      
+      //docs.id
+			arrSuggest.push(obj);
+			console.log(obj);
 		})
 		this.allSuggestion = arrSuggest;
 		console.log(this.allSuggestion);
 	},
 	methods:{
 		deleteSuggestion: function(s){
-			firestore.collection('koreanbap-suggestion').doc(s).delete().then(function(){
-				console.log("Deleted");
+			firestore.collection('koreanbap-suggestion').doc(s.id).delete().then(function(){
+				alert("Suggestion deleted");
 			}).catch(function(error){
-				console.log("Error:", error)
+				alert("Error deleting:", error)
 			})
 		}
 	}

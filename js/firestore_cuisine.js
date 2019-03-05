@@ -41,7 +41,7 @@ var cuisines_admin = new Vue({
       var origin_url = this.food_url;
       var ingredients = this.ingredient_list;
       var recipes = this.recipes_list;
-      console.log("Saving to Firestore DB:" + image, name, description, origin, origin_url);
+      console.log("Saving to Firestore DB:" + docRef.id);
       firestore.collection("koreanbap-cuisines").add({
         food_image: image,
         food_name: name,
@@ -51,9 +51,9 @@ var cuisines_admin = new Vue({
         food_ingredients: ingredients,
         food_recipes: recipes
       }).then(function(docRef){
-        console.log("Status saved!", docRef.id);
+        alert("Cuisine submitted!", docRef.id);
       }).catch(function(error){
-        console.log(error);
+        alert("Error submitting:", error);
       })
     },
     addInputIng: function(){

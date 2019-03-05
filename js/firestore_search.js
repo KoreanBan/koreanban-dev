@@ -17,7 +17,8 @@ var search = new Vue({
 	},
 	methods:{
 		searchButton: function(){
-			firestore.collection('koreanbap-cuisines').doc().where();
+			var search = firestore.collection('koreanbap-cuisines')
+      var query = search.where("food_name","==","").get();
 		}
 	}
 })

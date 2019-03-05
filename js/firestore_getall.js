@@ -23,6 +23,7 @@ var cuisines_get = new Vue({
 
     var arr = [];
     snapshots.forEach((docs)=>{
+      
       arr.push(docs.data());
       console.log(docs.data());
     })
@@ -30,11 +31,11 @@ var cuisines_get = new Vue({
     console.log(this.allcuisines);
   },
   methods:{
-    OpenModal:function(){
-      if(this.modal == false){
-        this.modal = true;
+    OpenModal:function(c){
+      if(this.showModal == false){
+        this.showModal = true;
       } else {
-        this.modal = false;
+        this.showModal = false;
       }
     }  
   }

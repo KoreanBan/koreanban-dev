@@ -17,27 +17,31 @@ var cuisines_edit = new Vue({
 	data:{
     editCuisines: []
 	},
-	methods:{
-		editKFC: function(e){
-			window.location.href = 'cuisine_edit_update_kfc.html';
-		},
-		deleteData: function(e){
-			firestore.collection('koreanbap-cuisines').doc(e).delete().then(function(){
-				console.log("File successfully deleted");
-			}).catch(function(error){
-				console.log("Error deleting file:", error);
-			});
-		}
-	},
-	created: async function(){
+  created: async function(){
 		var snapCuisines = await firestore.collection('koreanbap-cuisines').get();
 		
 		var arrCuisines = [];
 		snapCuisines.forEach((docs)=>{
-			arrCuisines.push(docs.data());
-			console.log(docs.data());
+			var obj = docs.data();
+      obj.id = docs.id;
+      
+      arrCuisines.push(obj);
+			console.log(obj);
 		})
 		this.editCuisines = arrCuisines;
 		console.log(this.editCuisines);
-	}
+	},
+	methods:{
+		editKFC: function(e){
+			//modal
+		},
+		deleteData: function(e){
+			firestore.collection('koreanbap-cuisines').doc(e.id).delete().then(function(){
+				alert("File successfully deleted!");
+			}).catch(function(error){
+				alert("Error deleting file:", error);
+			});
+		}
+	},
+	
 });
