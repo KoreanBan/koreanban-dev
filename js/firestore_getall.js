@@ -16,6 +16,7 @@ var cuisines_get = new Vue({
   el:"#cuisinesGet",
   data:{
     allcuisines:[],
+    currcuisines: {},
     showModal: false
   },
   created: async function(){
@@ -33,10 +34,12 @@ var cuisines_get = new Vue({
     console.log(this.allcuisines);
   },
   methods:{
-    OpenModal:function(c){
-      
-			if(this.showModal == false){
+    OpenModal(c){
+    	if(this.showModal == false){
         this.showModal = true;
+        this.currcuisines = c;
+        console.log(this.currcuisines);
+        // pass over to the modal
       } else {
         this.showModal = false;
       }

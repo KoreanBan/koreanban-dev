@@ -12,12 +12,13 @@ Vue.component('search', {
 </form>'
 });
 
-
-Vue.component('cuisModal', {
-  props: ['a.food_name'],
-  template: '<div class="modal" v-for="a in allcuisines">\
-        <p>{{a.food_name}}</p>\
+Vue.component('cuismodal',{
+  props: ['obj'],
+  template:'<div>\
+        <div class="modal">\
+        <p>{{obj.food_name}}</p>\
         <button class="btn">Close</button>\
+      </div>\
       </div>'
 });
 
