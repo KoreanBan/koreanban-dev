@@ -15,10 +15,13 @@ Vue.component('search', {
 Vue.component('cuismodal',{
   props: ['obj'],
   template:'<div>\
-        <div class="modal">\
-        <p>{{obj.food_name}}</p>\
-        <button class="btn">Close</button>\
-      </div>\
-      </div>'
+  <button>Close</button>\
+  <h1>{{obj.food_name}}</h1>\
+  <img :src="obj.food_image"/>\
+  <p>{{obj.food_desc}}</p>\
+  <ul>\
+  <li>{{obj.food_ingredients[].list}} - {{obj.food_ingredients[].quantity}}</li>\
+  </ul>\
+  </div>'
 });
 
