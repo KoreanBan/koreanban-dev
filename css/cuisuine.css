@@ -128,7 +128,7 @@ h1 {
 
 /* Modal */
 .modal {
-  position: absolute;
+  position: relative;
   top:0;
   margin:auto;
   background:rgba(0, 0, 0, 0.2);
