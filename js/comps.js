@@ -17,6 +17,7 @@ Vue.component('cuisModal', {
   props: ['food_name'],
   template: '<div v-if="modal" class="modal" v-for="a in allcuisines">\
         <p>{{a.food_name}}</p>\
+        <button class="btn">Close</button>\
       </div>'
 });
 
