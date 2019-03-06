@@ -23,16 +23,19 @@ var cuisines_get = new Vue({
 
     var arr = [];
     snapshots.forEach((docs)=>{
-      
-      arr.push(docs.data());
-      console.log(docs.data());
+      var obj = docs.data();
+			obj.id = docs.id;
+			
+      arr.push(obj);
+      console.log(obj);
     })
     this.allcuisines = arr;
     console.log(this.allcuisines);
   },
   methods:{
     OpenModal:function(c){
-      if(this.showModal == false){
+      
+			if(this.showModal == false){
         this.showModal = true;
       } else {
         this.showModal = false;

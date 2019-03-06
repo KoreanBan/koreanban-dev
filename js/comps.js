@@ -14,8 +14,8 @@ Vue.component('search', {
 
 
 Vue.component('cuisModal', {
-  props: ['food_name'],
-  template: '<div v-if="modal" class="modal" v-for="a in allcuisines">\
+  props: ['a.food_name'],
+  template: '<div class="modal" v-for="a in allcuisines">\
         <p>{{a.food_name}}</p>\
       </div>'
 });
