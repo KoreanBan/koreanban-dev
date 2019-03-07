@@ -15,7 +15,9 @@ const docRef = firestore.collection('koreanbap-cuisines').doc();
 var cuisines_edit = new Vue({
 	el:"#cuisines_edit",
 	data:{
-    editCuisines: []
+    editCuisines: [],
+    cuisinemodal: {},
+    showModal: false
 	},
   created: async function(){
 		var snapCuisines = await firestore.collection('koreanbap-cuisines').get();
@@ -32,8 +34,14 @@ var cuisines_edit = new Vue({
 		console.log(this.editCuisines);
 	},
 	methods:{
-		editKFC: function(e){
-			//modal
+		editKFC (e){
+			if(this.showModal == false){
+        this.showModal = true;
+        this.cuisinemodal = e;
+        console.log(this.cuisinemodal);
+      } else {
+        this.showModal = false;
+      }
 		},
 		deleteData: function(e){
 			firestore.collection('koreanbap-cuisines').doc(e.id).delete().then(function(){
@@ -41,7 +49,13 @@ var cuisines_edit = new Vue({
 			}).catch(function(error){
 				alert("Error deleting file:", error);
 			});
+		},
+    updateData: function(obj2){
+      firestore.collection("koreanbap-cuisines").doc(obj2).update().then(function(){
+				alert("Data updated!");
+			}).catch(function(error){
+				alert("Unable to update:", error);
+			})
 		}
-	},
-	
+	}
 });

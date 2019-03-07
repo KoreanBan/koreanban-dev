@@ -30,3 +30,32 @@ Vue.component('cuismodal',{
   </div>'
 });
 
+Vue.component('cuisedit', {
+  props:['obj2'],
+  template:'<div>\
+  <button>Close</button>\
+  <p>Food Name:</p>\
+  <input type="text" v-bind:value="obj2.food_name" />\
+  <p>Food Image URL:</p>\
+  <input type="text" v-bind:value="obj2.food_image" />\
+  <p>Food Description:</p>\
+  <input type="text" v-bind:value="obj2.food_desc" />\
+  <p>Food Origin:</p>\
+  <input type="text" v-bind:value="obj2.food_origin" />\
+  <p>Google Map URL:</p>\
+  <input type="text" v-bind:value="obj2.food_url" />\
+  <p>Food Ingredients:</p>\
+  <span v-for="oj in obj2.food_ingredients">\
+  <input type="text" v-bind:value="oj.list" />\
+  <input type="text" v-bind:value="oj.quantity" />\
+  <br/>\
+  </span>\
+  <p>Food Recipes:</p>\
+  <span v-for="oj in obj2.food_recipes">\
+  <input type="text" v-bind:value="oj.list" />\
+  <br/>\
+  </span>\
+  <button @click="$emit(\'some-change\',obj2.id,\'input\',$event.target.value)">Update</button>\
+  </div>'
+});
+
