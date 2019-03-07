@@ -70,33 +70,32 @@ h1 {
 }
 
 .content-overlay {
-	background:var(--dark-overlay);
+	background-color:var(--dark-overlay);
   position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  height: 320px;
+  width: 400px;
+  z-index: 99;
+  cursor: pointer;
   opacity: 0;
   -webkit-transition: all 0.3s ease-in-out 0s;
 	-moz-transition: all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
 }
 
-.content:hover .content-overlay {
+.content-overlay:hover {
 	opacity:1;
 }
 
 .content-details {
+  z-index: 100;
 	position: absolute;
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
-  width: 100%;
+  width: 300px;
   top: 50%;
   left: 50%;
-  opacity: 0;
+  opacity: 1;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -105,7 +104,7 @@ h1 {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.content:hover .content-details {
+.content-overlay:hover .content-details {
 	top:50%;
 	left:50%;
 	opacity:1;
@@ -124,6 +123,10 @@ h1 {
 	font-family: var(--font-secondary);
 	color:var(--bright-color);
 	font-weight:500;
+}
+
+.grid {
+  font-size:1.5rem;
 }
 
 /* Modal */
@@ -148,4 +151,11 @@ footer {
 	footer {
 			font-size:0.7rem;
 	}
+}
+
+.flex-items{
+  width: 400px;
+  height: 320px;
+  margin: 1em;
+
 }
