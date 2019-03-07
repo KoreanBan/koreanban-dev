@@ -25,8 +25,8 @@ var cuisines_get = new Vue({
     var arr = [];
     snapshots.forEach((docs)=>{
       var obj = docs.data();
-			obj.id = docs.id;
-			
+      obj.id = docs.id;
+
       arr.push(obj);
       console.log(obj);
     })
@@ -35,7 +35,7 @@ var cuisines_get = new Vue({
   },
   methods:{
     OpenModal(c){
-    	if(this.showModal == false){
+      if(this.showModal == false){
         this.showModal = true;
         this.currcuisines = c;
         console.log(this.currcuisines);

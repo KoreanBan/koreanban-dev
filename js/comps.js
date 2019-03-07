@@ -20,7 +20,7 @@ Vue.component('cuismodal',{
   <img :src="obj.food_image"/>\
   <p>{{obj.food_desc}}</p>\
   <ul>\
-  <li>{{obj.food_ingredients[].list}} - {{obj.food_ingredients[].quantity}}</li>\
+  <li v-for="o in obj">{{o.food_ingredients.list}} - {{o.food_ingredients.quantity}}</li>\
   </ul>\
   </div>'
 });
