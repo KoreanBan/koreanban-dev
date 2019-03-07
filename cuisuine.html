@@ -74,12 +74,16 @@
 		<!-- Content trial -->
 
 		<div id="cuisinesGet">      
-			<div v-for="c in allcuisines" @click="OpenModal(c)" class="content">
-				<div class="content-overlay"></div>
-				<img :src="c.food_image" class="img-fluid"/>
-				<div class="content-details fadeIn-top">
-					<h3 class="grid text-light">{{c.food_name}}</h3>
+			<div class="d-flex flex-row flex-wrap justify-content-center"  class="content">
+				<div class="flex-items" v-for="c in	allcuisines" @click="OpenModal(c)">
+				<div class="content-overlay">
+					<div class="content-details fadeIn-top">
+						<h3 class="grid text-light">{{c.food_name}}</h3>
+					</div>
 				</div>
+				<img :src="c.food_image" class="img-fluid"/>
+			</div>
+
 			</div>
 			<transition name="fade">
 				<cuismodal v-if="showModal" v-bind:obj="currcuisines"></cuismodal>
