@@ -19,9 +19,14 @@ Vue.component('cuismodal',{
   <h1>{{obj.food_name}}</h1>\
   <img :src="obj.food_image"/>\
   <p>{{obj.food_desc}}</p>\
+  <h3>Ingredients</h3>\
   <ul>\
-  <li v-for="o in obj">{{o.food_ingredients.list}} - {{o.food_ingredients.quantity}}</li>\
+  <li v-for="o in obj.food_ingredients">{{o.list}} - {{o.quantity}}</li>\
   </ul>\
+  <h3>How to make {{obj.food_name}}</h3>\
+  <ol>\
+  <li v-for="o in obj.food_recipes">{{o.list}}</li>\
+  </ol>\
   </div>'
 });
 
