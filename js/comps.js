@@ -15,7 +15,7 @@ Vue.component('search', {
 Vue.component('cuismodal',{
   props: ['obj'],
   template:'<div>\
-  <button>Close</button>\
+  <button @click="$emit(\'closemodal\')">Close</button>\
   <h1>{{obj.food_name}}</h1>\
   <img :src="obj.food_image"/>\
   <p>{{obj.food_desc}}</p>\

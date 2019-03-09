@@ -40,7 +40,10 @@ var cuisines_get = new Vue({
         this.currcuisines = c;
         console.log(this.currcuisines);
         // pass over to the modal
-      } else {
+      } 
+    },
+    closemod: function(){
+      if(this.showModal == true){
         this.showModal = false;
       }
     }  
