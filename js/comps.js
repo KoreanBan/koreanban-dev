@@ -46,27 +46,27 @@ Vue.component('cuisedit', {
   template:'<div>\
   <button>Close</button>\
   <p>Food Name:</p>\
-  <input type="text" v-bind:value="obj2.food_name" v-on:some-change="$emit(\'input\', $event.target.value)"/>\
+  <input type="text" v-bind:value="obj2.food_name" v-on:change="$emit(\'change\', $event.target.value)"/>\
   <p>Food Image URL:</p>\
-  <input type="text" v-bind:value="obj2.food_image" v-on:some-change="$emit(\'input\', $event.target.value)"/>\
+  <input type="text" v-bind:value="obj2.food_image" v-on:change="$emit(\'change\', $event.target.value)"/>\
   <p>Food Description:</p>\
-  <input type="text" v-bind:value="obj2.food_desc" v-on:some-change="$emit(\'input\', $event.target.value)"/>\
+  <input type="text" v-bind:value="obj2.food_desc" v-on:change="$emit(\'change\', $event.target.value)"/>\
   <p>Food Origin:</p>\
-  <input type="text" v-bind:value="obj2.food_origin" v-on:some-change="$emit(\'input\', $event.target.value)"/>\
+  <input type="text" v-bind:value="obj2.food_origin" v-on:change="$emit(\'change\', $event.target.value)"/>\
   <p>Google Map URL:</p>\
-  <input type="text" v-bind:value="obj2.food_url" v-on:some-change="$emit(\'input\', $event.target.value)"/>\
+  <input type="text" v-bind:value="obj2.food_url" v-on:change="$emit(\'change\', $event.target.value)"/>\
   <p>Food Ingredients:</p>\
   <span v-for="oj in obj2.food_ingredients">\
-  <input type="text" v-bind:value="oj.list" v-on:some-change="$emit(\'input\', $event.target.value)"/>\
-  <input type="text" v-bind:value="oj.quantity" v-on:some-change="$emit(\'input\', $event.target.value)"/>\
+  <input type="text" v-bind:value="oj.list" v-on:change="$emit(\'change\', $event.target.value)"/>\
+  <input type="text" v-bind:value="oj.quantity" v-on:change="$emit(\'change\', $event.target.value)"/>\
   <br/>\
   </span>\
   <p>Food Recipes:</p>\
   <span v-for="oj in obj2.food_recipes">\
-  <input type="text" v-bind:value="oj.list" v-on:some-change="$emit(\'input\', $event.target.value)"/>\
+  <input type="text" v-bind:value="oj.list" v-on:change="$emit(\'change\', $event.target.value)"/>\
   <br/>\
   </span>\
-  <button @click="$emit(\'some-change\', obj2)">Update</button>\
+  <button @click="$emit(\'some-change\')">Update</button>\
   </div>'
 });
 
