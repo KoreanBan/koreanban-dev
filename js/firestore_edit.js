@@ -51,7 +51,8 @@ var cuisines_edit = new Vue({
 			});
 		},
     updateData: function(obj2){
-      firestore.collection("koreanbap-cuisines").doc(obj2).update().then(function(){
+			firestore.collection("koreanbap-cuisines").doc(obj2.id).update().then(function(){
+				console.log(obj2);
 				alert("Data updated!");
 			}).catch(function(error){
 				alert("Unable to update:", error);
