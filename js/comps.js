@@ -23,14 +23,16 @@ Vue.component('cuismodal',{
             <h1>{{obj.food_name}}</h1>\
           </span>\
           <img :src="obj.food_image" class="img-thumbnail"/>\
-          <p class="p-4">{{obj.food_desc}}</p>\
-          <h3 class="mx-3">Ingredients</h3>\
+          <p class="px-4 py-4">{{obj.food_desc}}</p>\
+          <span class="divider"></span>\
+          <h3 class="m-3">Ingredients</h3>\
           <ul class="mx-3">\
           <li v-for="o in obj.food_ingredients">{{o.list}} - {{o.quantity}}</li>\
           </ul>\
-          <h3 class="mx-3">How to make {{obj.food_name}}</h3>\
+          <span class="divider"></span>\
+          <h3 class="m-3">How to make {{obj.food_name}}</h3>\
           <ol>\
-          <li class="p-3" v-for="o in obj.food_recipes">{{o.list}}</li>\
+          <li class="pr-5 pl-3 py-2" v-for="o in obj.food_recipes">{{o.list}}</li>\
           </ol>\
           <span class="modal-footer">\
           <button class="btn" @click="$emit(\'closemodal\')">Close</button>\
