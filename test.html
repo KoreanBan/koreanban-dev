@@ -1,0 +1,20 @@
+<transition name="fade">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>{{obj.food_name}}</h1>
+      </div>
+      <img :src="obj.food_image"/>
+      <p>{{obj.food_desc}}</p>
+      <h3>Ingredients</h3>
+      <ul>
+        <li v-for="o in obj.food_ingredients">{{o.list}} - {{o.quantity}}</li>
+      </ul>
+      <h3>How to make {{obj.food_name}}</h3>\
+      <ol>
+        <li v-for="o in obj.food_recipes">{{o.list}}</li>
+      </ol>
+      <button @click="$emit(\'closemodal\')">Close</button>
+    </div>
+  </div>
+</transition>

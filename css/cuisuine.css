@@ -61,7 +61,6 @@ h1 {
 }
 
 /* Hover */
-
 .content {
 	position: relative;
 	margin:auto;
@@ -130,6 +129,15 @@ h1 {
 }
 
 /* Modal */
+.wrapper {
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+}
+
 .modal {
   position: relative;
   top:0;
@@ -138,6 +146,35 @@ h1 {
   left:0;
   width:100%;
   height:100%;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.btn {
+  background-color:var(--main-color);
+  color:var(--bright-color);
+}
+
+.btn:hover {
+  background-color:var(--secondary-color);
+  color:var(--bright-color);
+}
+
+.modal-header {
+  margin:0 auto;
+}
+
+.modal-header h1{
+  font-size:2rem;
+}
+
+.modal-dialog h3 {
+  font-size:1.5rem;
 }
 
 /* Footer */
@@ -157,5 +194,4 @@ footer {
   width: 400px;
   height: 320px;
   margin: 1em;
-
 }

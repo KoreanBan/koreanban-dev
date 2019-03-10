@@ -14,20 +14,31 @@ Vue.component('search', {
 
 Vue.component('cuismodal',{
   props: ['obj'],
-  template:'<div>\
-  <button @click="$emit(\'closemodal\')">Close</button>\
-  <h1>{{obj.food_name}}</h1>\
-  <img :src="obj.food_image"/>\
-  <p>{{obj.food_desc}}</p>\
-  <h3>Ingredients</h3>\
-  <ul>\
-  <li v-for="o in obj.food_ingredients">{{o.list}} - {{o.quantity}}</li>\
-  </ul>\
-  <h3>How to make {{obj.food_name}}</h3>\
-  <ol>\
-  <li v-for="o in obj.food_recipes">{{o.list}}</li>\
-  </ol>\
-  </div>'
+  template:
+'<transition name="fade">\
+  <div class="wrapper">\
+    <div class="modal-dialog modal-dialog-scrollable" role="document">\
+      <div class="modal-content">\
+          <span class="modal-header">\
+            <h1>{{obj.food_name}}</h1>\
+          </span>\
+          <img :src="obj.food_image" class="img-thumbnail"/>\
+          <p class="p-4">{{obj.food_desc}}</p>\
+          <h3 class="mx-3">Ingredients</h3>\
+          <ul class="mx-3">\
+          <li v-for="o in obj.food_ingredients">{{o.list}} - {{o.quantity}}</li>\
+          </ul>\
+          <h3 class="mx-3">How to make {{obj.food_name}}</h3>\
+          <ol>\
+          <li class="p-3" v-for="o in obj.food_recipes">{{o.list}}</li>\
+          </ol>\
+          <span class="modal-footer">\
+          <button class="btn" @click="$emit(\'closemodal\')">Close</button>\
+          </span>\
+        </div>\
+      </div>\
+    </div>\
+  </transition>'
 });
 
 Vue.component('cuisedit', {
