@@ -28,17 +28,17 @@ var cuisines_get = new Vue({
       obj.id = docs.id;
 
       arr.push(obj);
-      console.log(obj);
+//      console.log(obj);
     })
     this.allcuisines = arr;
-    console.log(this.allcuisines);
+//    console.log(this.allcuisines);
   },
   methods:{
     OpenModal(c){
       if(this.showModal == false){
         this.showModal = true;
         this.currcuisines = c;
-        console.log(this.currcuisines);
+//        console.log(this.currcuisines);
         // pass over to the modal
       } 
     },
