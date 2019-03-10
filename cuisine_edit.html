@@ -55,14 +55,9 @@
                 </tr>
               </tbody>
             </table>
-
-            <transition name="fade">
-              <cuisedit v-if="showModal" v-bind:obj2="cuisinemodal" v-on:some-change="updateData()"></cuisedit>
-            </transition>
-
+            <cuisedit v-if="showModal" v-bind:obj2="cuisinemodal" v-on:some-change="updateData()"></cuisedit>
           </div>
         </div>
-
       </div>
     </div>
 
