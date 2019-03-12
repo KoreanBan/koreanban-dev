@@ -50,8 +50,8 @@ var cuisines_edit = new Vue({
 				alert("Error deleting file:", error);
 			});
 		},
-    updateData: function(){
-			firestore.collection("koreanbap-cuisines").doc().update().then(function(){
+    updateData: function(id, event){
+			firestore.collection("koreanbap-cuisines").doc(id).update().then(function(){
 				alert("Data updated!");
 			}).catch(function(error){
 				alert("Unable to update:", error);

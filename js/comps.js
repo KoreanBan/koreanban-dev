@@ -84,7 +84,7 @@ Vue.component('cuisedit', {
         </span>\
       </div>\
       <span class="modal-footer">\
-        <button class="btn" @click="$emit(\'some-change\')">Update</button>\
+        <button class="btn" @click="$emit(\'some-change\', {id: obj2.id, event: $event})">Update</button>\
         <button class="btn">Close</button>\
       </span>\
     </form>\

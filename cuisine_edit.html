@@ -55,7 +55,7 @@
                 </tr>
               </tbody>
             </table>
-            <cuisedit v-if="showModal" v-bind:obj2="cuisinemodal" v-on:some-change="updateData()"></cuisedit>
+            <cuisedit v-if="showModal" :obj2="cuisinemodal" @some-change="updateData"></cuisedit>
           </div>
         </div>
       </div>
