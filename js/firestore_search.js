@@ -16,7 +16,7 @@ var search = new Vue({
     search: ""
   },
   methods: {
-    searchButton: async function () {
+    async searchButton() {
       var search = await firestore.collection('koreanbap-cuisines');
       var query =  await search.where("food_name", "==", "Pancake").get();
       
